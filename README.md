@@ -1,6 +1,8 @@
 # KitCash
 
-This is a Prject for computer programming 06016315
+* This is a Prject for computer programming 06016315
+### KitCash is a shop assitstant program which will help you manage your own shop. KitCash may help you organize storing goods, selling ad billing with "send to line " function will send a bill to your LINE ID, it's also able to chose date time with range to get a report(bill) too. so....
+# ENJOY
 
 ## Installation
 [Full documentation: (https://github.com/compro-itkmitl/KitCash)]
