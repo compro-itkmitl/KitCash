@@ -1,0 +1,38 @@
+c:\users\onez\documents\visual studio 2015\Projects\Reporting2\Reporting\bin\Debug\Reporting.exe.config
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Reporting.exe
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Reporting.pdb
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.Reporting.dll
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.Reporting.pdb
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.Reporting.xml
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.csprojResolveAssemblyReference.cache
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.FormReporting.resources
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.Properties.Resources.resources
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.csproj.GenerateResource.Cache
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.exe.licenses
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.exe
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.pdb
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Users\ONEZ\Documents\Visual Studio 2015\Projects\Reporting2\Reporting\obj\Debug\Reporting.ReportSale.resources
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Reporting.exe.config
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Reporting.exe
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Reporting.pdb
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.Reporting.dll
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.dll
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.Reporting.pdb
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.Reporting.xml
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.pdb
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\bin\Debug\Telerik.ReportViewer.WinForms.xml
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.csprojResolveAssemblyReference.cache
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.FormReporting.resources
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.Properties.Resources.resources
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.ReportSale.resources
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.csproj.GenerateResource.cache
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.exe.licenses
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.csproj.CoreCompileInputs.cache
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.csproj.CopyComplete
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.exe
+C:\Users\PxOnez\source\repos\Reporting2\Reporting\obj\Debug\Reporting.pdb

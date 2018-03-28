@@ -1,0 +1,38 @@
+  Reporting.FormSaleReport.resources - Embedded, ContainedInManifestFile, 
+  Reporting.Properties.Resources.resources - Embedded, ContainedInManifestFile, 
+  Reporting.ReportSale.resources - Embedded, ContainedInManifestFile, 
+  Reporting.exe.licenses - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Reporting, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Telerik.ReportViewer.WinForms, Version=11.1.17.503, Culture=neutral, PublicKeyToken=a9d7983dfcc261be: 
+	hash=None, flags=None
+Assembly Telerik.Reporting, Version=11.1.17.503, Culture=neutral, PublicKeyToken=a9d7983dfcc261be: 
+	hash=None, flags=None
+Assembly Bunifu_UI_v1.5.3, Version=1.5.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class ConnectionStr: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String strcon : Public, Static
+  Methods:
+    connnectsql(): PrivateScope, Public, Static, HideBySig
+    executsql(String): PrivateScope, Public, Static, HideBySig
+    Getdate(DateTime): PrivateScope, Public, Static, HideBySig
+    Getdateend(DateTime): PrivateScope, Public, Static, HideBySig
+Class Reporting.FormSaleReport: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Reporting.ReportSale: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :Telerik.Reporting.Report
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
