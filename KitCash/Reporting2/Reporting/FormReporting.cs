@@ -24,12 +24,54 @@ namespace Reporting
         private void FormReporting_Load(object sender, EventArgs e)
         {
             ConnectionStr.connnectsql();
+            
             Process[] pname = Process.GetProcessesByName("KitCash");
             if (pname.Length == 0)
             {
                 MessageBox.Show("กรุณาเข้าสู่ระบบ");
                 Close();
             }
+            foreach (Process process in pname)
+            {
+                //if (!String.IsNullOrEmpty(process.MainWindowTitle))
+                //{
+                //    MessageBox.Show(process.MainWindowTitle);
+                //}
+                string s = process.MainWindowTitle;
+                s = s.Replace("KitCash - ", "");
+                DataTable empid = ConnectionStr.executsql("SELECT * FROM Tbl_Employee WHERE Emp_Id = '" + s + "'");
+                if (empid.Rows.Count > 0)
+                {
+                    string n = "KitCash - " + s;
+                    if (process.MainWindowTitle != n)
+                    {
+                        MessageBox.Show("กรุณาเข้าสู่ระบบ");
+                        Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("กรุณาเข้าสู่ระบบ");
+                    Close();
+                }
+            }
+            //if (pname.Length == 0)
+            //{
+            //    MessageBox.Show("กรุณาเข้าสู่ระบบ");
+            //    Close();
+            //}
+            //var info = Process.GetProcessesByName("KitCash").FirstOrDefault();
+
+            //string info2 = Convert.ToString(info);
+            //if (info2 == "KitCash - Menu")
+            //{
+            //}
+            //else
+            //{
+            //    MessageBox.Show(info2);
+            //    Close();
+            //}
+          
         }
 
         int mouseX = 0, mouseY = 0;
