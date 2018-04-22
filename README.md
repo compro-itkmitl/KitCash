@@ -62,9 +62,9 @@
 # Members
 |  |ชื่อ|นามสกุล|GitHub Username|รหัสนักศึกษา|
 |:-:|--|------|---------------|---------|
-|![](Pics/onez.jpg)|Kitrawee|Phasukrojsin|[@nuengnakhap](https://github.com/sagelga)|60070005|
-|![](Pics/kim.jpg)|Khosit|Khositsrikunakorn|[@kimkho](https://github.com/skydddoogg)|60070008|
-|![](Pics/phee.jpg)|Chayanin|Lumyong|[@azurelisz](https://github.com/noppanut15)|60070012|
+|![](Pics/onez.jpg)|Kitrawee|Phasukrojsin|[@nuengnakhap](https://github.com/nuengnakhap)|60070005|
+|![](Pics/kim.jpg)|Khosit|Khositsrikunakorn|[@kimkho](https://github.com/kimkho)|60070008|
+|![](Pics/phee.jpg)|Chayanin|Lumyong|[@azurelisz](https://github.com/azurelisz)|60070012|
 # Special Thanks
 * Asst Profressor Kitsuchart Pasupa
     - ![](Pics/ksc.jpg)
