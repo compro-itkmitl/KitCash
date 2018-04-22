@@ -15,7 +15,8 @@ public class ConnectionStr
     
 
     {
-        strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
+        //strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         //strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";
     }
 

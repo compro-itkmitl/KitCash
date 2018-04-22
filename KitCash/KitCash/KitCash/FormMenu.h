@@ -13,6 +13,7 @@ namespace KitCash {
 	using namespace System::Diagnostics;
 	using namespace System::Runtime::InteropServices;
 	using namespace System::Threading;
+	using namespace Microsoft::Win32;
 
 	/// <summary>
 	/// Summary for FormMenu
@@ -2314,8 +2315,7 @@ private: System::Void pro_idedit_TextChanged(System::Object^  sender, System::Ev
 {
 	try
 	{
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2497,8 +2497,7 @@ private: System::Void pro_id_TextChanged(System::Object^  sender, System::EventA
 {
 	try
 	{
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2595,8 +2594,7 @@ private: void Trid()
 {
 	try
 	{
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2690,6 +2688,7 @@ private: System::Void FormMenu_Load(System::Object^  sender, System::EventArgs^ 
 	String^ path = System::IO::Directory::GetCurrentDirectory();
 	Connection2::executesql("INSERT INTO Path (path) VALUES ('" + path + "')");
 	Connection2::executesql("UPDATE Path SET path = REPLACE(path, '\\', '/')");
+
 }
 private: System::Void panelHeader_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
 {
@@ -2769,8 +2768,7 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 	String^ check2 = Convert::ToString(check);
 	try
 	{
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2799,8 +2797,7 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 	}
 	try
 	{
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2814,6 +2811,8 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 		{
 			String^ path = reader["path"]->ToString();
 			Process::Start(path + "/Reporting.exe");
+			Thread::Sleep(2000);
+			Form::Text = L"KitCash";
 		}
 		else
 		{
@@ -2845,8 +2844,7 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 		labelheader->Text = "ITEM_SALE";
 		try
 		{
-			String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-			/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+			String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 			SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2941,8 +2939,7 @@ private: void Empid()
 {
 	try
 	{
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2996,8 +2993,7 @@ private: System::Void b_data_Click(System::Object^  sender, System::EventArgs^  
 		{
 			try
 			{
-				/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
-				String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+				String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 				SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -3070,8 +3066,7 @@ private: System::Void emp_id_TextChanged(System::Object^  sender, System::EventA
 {
 	try
 	{
-		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
-		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 

@@ -1,7 +1,5 @@
-﻿  Connection2.cpp
-  FormMenu.cpp
+﻿  FormMenu.cpp
 c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2459): warning C4101: 'ex': unreferenced local variable
-c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2556): warning C4101: 'ex': unreferenced local variable
-c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2583): warning C4101: 'ex': unreferenced local variable
-  Generating Code...
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2555): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2582): warning C4101: 'ex': unreferenced local variable
   KitCash.vcxproj -> C:\Users\PxOnez\source\repos\KitCash\Debug\KitCash.exe
