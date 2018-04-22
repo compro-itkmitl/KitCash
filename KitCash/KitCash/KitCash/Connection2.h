@@ -20,11 +20,13 @@ public:
 	static void connnectsql()
 	{
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 	}
 
 	static DataTable^ executesql(String^ sql)
 	{
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 		SqlConnection^ objConn = gcnew SqlConnection();
 		SqlDataAdapter^ dtAdapter = gcnew SqlDataAdapter();
 		DataTable^ dt = gcnew DataTable();

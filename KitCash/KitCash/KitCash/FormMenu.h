@@ -1,5 +1,6 @@
 #pragma once
 #include "Connection2.h"
+#include "FormLogin.h"
 
 namespace KitCash {
 
@@ -39,7 +40,7 @@ namespace KitCash {
 			}
 		}
 	private: System::Windows::Forms::Panel^  panelmain;
-	private: System::Windows::Forms::Panel^  panelloginleft;
+
 
 	protected:
 	private: System::Windows::Forms::Panel^  paneledit;
@@ -91,7 +92,9 @@ namespace KitCash {
 	private: System::Windows::Forms::Label^  label13;
 	private: System::Windows::Forms::Label^  label12;
 	private: System::Windows::Forms::Label^  label11;
-	private: System::Windows::Forms::TextBox^  emp;
+	public: System::Windows::Forms::TextBox^  emp;
+	private:
+
 	private: System::Windows::Forms::TextBox^  customer_name;
 	private: System::Windows::Forms::TextBox^  customer_id;
 	private: System::Windows::Forms::Label^  label10;
@@ -123,9 +126,11 @@ namespace KitCash {
 	private: System::Windows::Forms::Label^  label3;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label14;
-private: System::Windows::Forms::Label^  stateuser;
+public: System::Windows::Forms::Label^  stateuser;
+private:
+
 private: System::Windows::Forms::PictureBox^  pictureBox2;
-private: Bunifu::Framework::UI::BunifuFlatButton^  b_loginmenu;
+
 
 private: Bunifu::Framework::UI::BunifuFlatButton^  b_itemreport;
 private: Bunifu::Framework::UI::BunifuFlatButton^  b_itemedit;
@@ -133,7 +138,7 @@ private: Bunifu::Framework::UI::BunifuFlatButton^  b_itemadd;
 private: Bunifu::Framework::UI::BunifuFlatButton^  b_itemsale;
 private: System::Windows::Forms::Panel^  paneltask;
 private: System::Windows::Forms::Panel^  panelloginright;
-private: System::Windows::Forms::Panel^  panel1;
+
 private: System::Windows::Forms::PictureBox^  pictureBox3;
 private: Bunifu::Framework::UI::BunifuFlatButton^  b_login;
 
@@ -146,6 +151,60 @@ private: System::Windows::Forms::PictureBox^  pictureBox5;
 private: System::Windows::Forms::PictureBox^  pictureBox4;
 private: System::Windows::Forms::Panel^  panel4;
 private: System::Windows::Forms::Label^  label27;
+
+
+private: System::Windows::Forms::Panel^  paneluser;
+public: System::Windows::Forms::TextBox^  address4;
+private:
+
+public: System::Windows::Forms::TextBox^  address3;
+private:
+
+public: System::Windows::Forms::TextBox^  address2;
+
+public: System::Windows::Forms::TextBox^  address1;
+
+public: System::Windows::Forms::TextBox^  emp_name;
+
+public: System::Windows::Forms::TextBox^  emp_id;
+private: Bunifu::Framework::UI::BunifuFlatButton^  b_data;
+public:
+
+
+public:
+private: System::Windows::Forms::Label^  label28;
+private: System::Windows::Forms::Label^  label29;
+private: System::Windows::Forms::Label^  label30;
+private: System::Windows::Forms::Label^  label31;
+private: System::Windows::Forms::Label^  label32;
+private: System::Windows::Forms::Label^  label33;
+private: Bunifu::Framework::UI::BunifuFlatButton^  b_user;
+private: System::Windows::Forms::Label^  label40;
+private: System::Windows::Forms::Label^  label39;
+private: System::Windows::Forms::Label^  label38;
+private: System::Windows::Forms::Label^  label37;
+private: System::Windows::Forms::Label^  label36;
+private: System::Windows::Forms::Label^  label35;
+private: System::Windows::Forms::Label^  label34;
+public: System::Windows::Forms::TextBox^  note;
+private:
+
+public: System::Windows::Forms::TextBox^  line;
+private:
+
+public: System::Windows::Forms::TextBox^  fb;
+
+public: System::Windows::Forms::TextBox^  email;
+
+public: System::Windows::Forms::TextBox^  phone2;
+
+public: System::Windows::Forms::TextBox^  phone1;
+
+public: System::Windows::Forms::TextBox^  address5;
+private: System::Windows::Forms::CheckBox^  checkBox1;
+public:
+
+
 
 
 
@@ -170,16 +229,36 @@ private: System::Windows::Forms::Label^  label27;
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->panelmain = (gcnew System::Windows::Forms::Panel());
+			this->paneluser = (gcnew System::Windows::Forms::Panel());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->note = (gcnew System::Windows::Forms::TextBox());
+			this->line = (gcnew System::Windows::Forms::TextBox());
+			this->fb = (gcnew System::Windows::Forms::TextBox());
+			this->email = (gcnew System::Windows::Forms::TextBox());
+			this->phone2 = (gcnew System::Windows::Forms::TextBox());
+			this->phone1 = (gcnew System::Windows::Forms::TextBox());
+			this->address5 = (gcnew System::Windows::Forms::TextBox());
+			this->address4 = (gcnew System::Windows::Forms::TextBox());
+			this->address3 = (gcnew System::Windows::Forms::TextBox());
+			this->address2 = (gcnew System::Windows::Forms::TextBox());
+			this->address1 = (gcnew System::Windows::Forms::TextBox());
+			this->emp_name = (gcnew System::Windows::Forms::TextBox());
+			this->emp_id = (gcnew System::Windows::Forms::TextBox());
+			this->b_data = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->panelsale = (gcnew System::Windows::Forms::Panel());
-			this->panelloginright = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
-			this->password = (gcnew Bunifu::Framework::UI::BunifuMetroTextbox());
-			this->username = (gcnew Bunifu::Framework::UI::BunifuMetroTextbox());
-			this->panel4 = (gcnew System::Windows::Forms::Panel());
-			this->label27 = (gcnew System::Windows::Forms::Label());
-			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
-			this->b_login = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->b_savesale = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label12 = (gcnew System::Windows::Forms::Label());
@@ -253,9 +332,7 @@ private: System::Windows::Forms::Label^  label27;
 			this->exit = (gcnew System::Windows::Forms::Label());
 			this->labelheader = (gcnew System::Windows::Forms::Label());
 			this->panelMenu = (gcnew System::Windows::Forms::Panel());
-			this->panelloginleft = (gcnew System::Windows::Forms::Panel());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->b_loginmenu = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
+			this->b_user = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->b_itemreport = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->b_itemedit = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->b_itemadd = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
@@ -264,13 +341,18 @@ private: System::Windows::Forms::Label^  label27;
 			this->panelLogo = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			this->panelloginright = (gcnew System::Windows::Forms::Panel());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
+			this->password = (gcnew Bunifu::Framework::UI::BunifuMetroTextbox());
+			this->username = (gcnew Bunifu::Framework::UI::BunifuMetroTextbox());
+			this->panel4 = (gcnew System::Windows::Forms::Panel());
+			this->label27 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
+			this->b_login = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->panelmain->SuspendLayout();
+			this->paneluser->SuspendLayout();
 			this->panelsale->SuspendLayout();
-			this->panelloginright->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
-			this->panel4->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->qty))->BeginInit();
 			this->paneladd->SuspendLayout();
@@ -279,28 +361,427 @@ private: System::Windows::Forms::Label^  label27;
 			this->panelHeader->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->panelMenu->SuspendLayout();
-			this->panelloginleft->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			this->panelloginright->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
+			this->panel4->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// panelmain
 			// 
 			this->panelmain->BackColor = System::Drawing::Color::Gainsboro;
+			
+			this->panelmain->Controls->Add(this->panelloginright);
 			this->panelmain->Controls->Add(this->panelsale);
+			
 			this->panelmain->Controls->Add(this->paneladd);
 			this->panelmain->Controls->Add(this->paneledit);
+			this->panelmain->Controls->Add(this->paneluser);
 			this->panelmain->Controls->Add(this->panelHeader);
 			this->panelmain->Controls->Add(this->panelMenu);
+			
 			this->panelmain->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panelmain->Location = System::Drawing::Point(0, 0);
 			this->panelmain->Name = L"panelmain";
 			this->panelmain->Size = System::Drawing::Size(900, 673);
 			this->panelmain->TabIndex = 0;
 			// 
+			// paneluser
+			// 
+			this->paneluser->BackColor = System::Drawing::Color::Gainsboro;
+			this->paneluser->Controls->Add(this->checkBox1);
+			this->paneluser->Controls->Add(this->label40);
+			this->paneluser->Controls->Add(this->label39);
+			this->paneluser->Controls->Add(this->label38);
+			this->paneluser->Controls->Add(this->label37);
+			this->paneluser->Controls->Add(this->label36);
+			this->paneluser->Controls->Add(this->label35);
+			this->paneluser->Controls->Add(this->label34);
+			this->paneluser->Controls->Add(this->note);
+			this->paneluser->Controls->Add(this->line);
+			this->paneluser->Controls->Add(this->fb);
+			this->paneluser->Controls->Add(this->email);
+			this->paneluser->Controls->Add(this->phone2);
+			this->paneluser->Controls->Add(this->phone1);
+			this->paneluser->Controls->Add(this->address5);
+			this->paneluser->Controls->Add(this->address4);
+			this->paneluser->Controls->Add(this->address3);
+			this->paneluser->Controls->Add(this->address2);
+			this->paneluser->Controls->Add(this->address1);
+			this->paneluser->Controls->Add(this->emp_name);
+			this->paneluser->Controls->Add(this->emp_id);
+			this->paneluser->Controls->Add(this->b_data);
+			this->paneluser->Controls->Add(this->label28);
+			this->paneluser->Controls->Add(this->label29);
+			this->paneluser->Controls->Add(this->label30);
+			this->paneluser->Controls->Add(this->label31);
+			this->paneluser->Controls->Add(this->label32);
+			this->paneluser->Controls->Add(this->label33);
+			this->paneluser->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->paneluser->Location = System::Drawing::Point(223, 78);
+			this->paneluser->Name = L"paneluser";
+			this->paneluser->Size = System::Drawing::Size(677, 595);
+			this->paneluser->TabIndex = 35;
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Cloud", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->checkBox1->Location = System::Drawing::Point(105, 22);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(92, 25);
+			this->checkBox1->TabIndex = 85;
+			this->checkBox1->Text = L"แก้ไขข้อมูล";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkBox1_CheckedChanged);
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label40->Location = System::Drawing::Point(33, 297);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(68, 21);
+			this->label40->TabIndex = 84;
+			this->label40->Text = L"หมายเหตุ :";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label39->Location = System::Drawing::Point(371, 293);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(48, 21);
+			this->label39->TabIndex = 83;
+			this->label39->Text = L"Line :";
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label38->Location = System::Drawing::Point(333, 254);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(86, 21);
+			this->label38->TabIndex = 82;
+			this->label38->Text = L"Facebook :";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label37->Location = System::Drawing::Point(41, 256);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(60, 21);
+			this->label37->TabIndex = 81;
+			this->label37->Text = L"E-Mail :";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label36->Location = System::Drawing::Point(367, 215);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(52, 21);
+			this->label36->TabIndex = 80;
+			this->label36->Text = L"มือถือ :";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label35->Location = System::Drawing::Point(38, 215);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(63, 21);
+			this->label35->TabIndex = 79;
+			this->label35->Text = L"โทรศัพท์ :";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label34->Location = System::Drawing::Point(352, 176);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(67, 21);
+			this->label34->TabIndex = 78;
+			this->label34->Text = L"ไปรษณีย์ :";
+			// 
+			// note
+			// 
+			this->note->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->note->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->note->Location = System::Drawing::Point(105, 290);
+			this->note->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->note->Multiline = true;
+			this->note->Name = L"note";
+			this->note->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->note->Size = System::Drawing::Size(215, 181);
+			this->note->TabIndex = 77;
+			// 
+			// line
+			// 
+			this->line->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->line->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->line->Location = System::Drawing::Point(425, 290);
+			this->line->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->line->Name = L"line";
+			this->line->Size = System::Drawing::Size(215, 29);
+			this->line->TabIndex = 76;
+			// 
+			// fb
+			// 
+			this->fb->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->fb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->fb->Location = System::Drawing::Point(425, 251);
+			this->fb->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->fb->Name = L"fb";
+			this->fb->Size = System::Drawing::Size(215, 29);
+			this->fb->TabIndex = 75;
+			// 
+			// email
+			// 
+			this->email->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->email->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->email->Location = System::Drawing::Point(105, 251);
+			this->email->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->email->Name = L"email";
+			this->email->Size = System::Drawing::Size(215, 29);
+			this->email->TabIndex = 74;
+			// 
+			// phone2
+			// 
+			this->phone2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->phone2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->phone2->Location = System::Drawing::Point(425, 212);
+			this->phone2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->phone2->Name = L"phone2";
+			this->phone2->Size = System::Drawing::Size(215, 29);
+			this->phone2->TabIndex = 73;
+			// 
+			// phone1
+			// 
+			this->phone1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->phone1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->phone1->Location = System::Drawing::Point(105, 212);
+			this->phone1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->phone1->Name = L"phone1";
+			this->phone1->Size = System::Drawing::Size(215, 29);
+			this->phone1->TabIndex = 72;
+			// 
+			// address5
+			// 
+			this->address5->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address5->Location = System::Drawing::Point(425, 173);
+			this->address5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address5->Name = L"address5";
+			this->address5->Size = System::Drawing::Size(215, 29);
+			this->address5->TabIndex = 71;
+			// 
+			// address4
+			// 
+			this->address4->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address4->Location = System::Drawing::Point(105, 173);
+			this->address4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address4->Name = L"address4";
+			this->address4->Size = System::Drawing::Size(215, 29);
+			this->address4->TabIndex = 70;
+			// 
+			// address3
+			// 
+			this->address3->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address3->Location = System::Drawing::Point(425, 134);
+			this->address3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address3->Name = L"address3";
+			this->address3->Size = System::Drawing::Size(215, 29);
+			this->address3->TabIndex = 69;
+			// 
+			// address2
+			// 
+			this->address2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address2->Location = System::Drawing::Point(105, 134);
+			this->address2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address2->Name = L"address2";
+			this->address2->Size = System::Drawing::Size(215, 29);
+			this->address2->TabIndex = 68;
+			// 
+			// address1
+			// 
+			this->address1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address1->Location = System::Drawing::Point(105, 95);
+			this->address1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address1->Name = L"address1";
+			this->address1->Size = System::Drawing::Size(535, 29);
+			this->address1->TabIndex = 67;
+			// 
+			// emp_name
+			// 
+			this->emp_name->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->emp_name->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->emp_name->Location = System::Drawing::Point(425, 58);
+			this->emp_name->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->emp_name->Name = L"emp_name";
+			this->emp_name->Size = System::Drawing::Size(215, 29);
+			this->emp_name->TabIndex = 66;
+			// 
+			// emp_id
+			// 
+			this->emp_id->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->emp_id->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->emp_id->Location = System::Drawing::Point(105, 58);
+			this->emp_id->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->emp_id->Name = L"emp_id";
+			this->emp_id->ReadOnly = true;
+			this->emp_id->Size = System::Drawing::Size(215, 29);
+			this->emp_id->TabIndex = 65;
+			this->emp_id->TextChanged += gcnew System::EventHandler(this, &FormMenu::emp_id_TextChanged);
+			// 
+			// b_data
+			// 
+			this->b_data->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(139)),
+				static_cast<System::Int32>(static_cast<System::Byte>(87)));
+			this->b_data->BackColor = System::Drawing::Color::SeaGreen;
+			this->b_data->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_data->BorderRadius = 0;
+			this->b_data->ButtonText = L"บันทึกข้อมูล";
+			this->b_data->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_data->DisabledColor = System::Drawing::Color::Gray;
+			this->b_data->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_data->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_data.Iconimage")));
+			this->b_data->Iconimage_right = nullptr;
+			this->b_data->Iconimage_right_Selected = nullptr;
+			this->b_data->Iconimage_Selected = nullptr;
+			this->b_data->IconMarginLeft = 0;
+			this->b_data->IconMarginRight = 0;
+			this->b_data->IconRightVisible = true;
+			this->b_data->IconRightZoom = 0;
+			this->b_data->IconVisible = true;
+			this->b_data->IconZoom = 90;
+			this->b_data->IsTab = false;
+			this->b_data->Location = System::Drawing::Point(370, 341);
+			this->b_data->Name = L"b_data";
+			this->b_data->Normalcolor = System::Drawing::Color::SeaGreen;
+			this->b_data->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->b_data->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_data->selected = false;
+			this->b_data->Size = System::Drawing::Size(270, 130);
+			this->b_data->TabIndex = 65;
+			this->b_data->Text = L"บันทึกข้อมูล";
+			this->b_data->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_data->Textcolor = System::Drawing::Color::White;
+			this->b_data->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_data->Click += gcnew System::EventHandler(this, &FormMenu::b_data_Click);
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label28->Location = System::Drawing::Point(43, 176);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(58, 21);
+			this->label28->TabIndex = 64;
+			this->label28->Text = L"จังหวัด :";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label29->Location = System::Drawing::Point(340, 137);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(79, 21);
+			this->label29->TabIndex = 63;
+			this->label29->Text = L"เขต/อำเภอ :";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label30->Location = System::Drawing::Point(16, 137);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(85, 21);
+			this->label30->TabIndex = 62;
+			this->label30->Text = L"แขวง/ตำบล :";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label31->Location = System::Drawing::Point(58, 98);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(43, 21);
+			this->label31->TabIndex = 61;
+			this->label31->Text = L"ที่อยู่ :";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label32->Location = System::Drawing::Point(324, 61);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(95, 21);
+			this->label32->TabIndex = 60;
+			this->label32->Text = L"ชื่อ - นามสกุล :";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label33->Location = System::Drawing::Point(13, 61);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(88, 21);
+			this->label33->TabIndex = 59;
+			this->label33->Text = L"รหัสพนักงาน :";
+			// 
 			// panelsale
 			// 
-			this->panelsale->Controls->Add(this->panelloginright);
 			this->panelsale->Controls->Add(this->b_savesale);
 			this->panelsale->Controls->Add(this->label13);
 			this->panelsale->Controls->Add(this->label12);
@@ -336,162 +817,6 @@ private: System::Windows::Forms::Label^  label27;
 			this->panelsale->Name = L"panelsale";
 			this->panelsale->Size = System::Drawing::Size(677, 595);
 			this->panelsale->TabIndex = 59;
-			// 
-			// panelloginright
-			// 
-			this->panelloginright->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
-				static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->panelloginright->Controls->Add(this->pictureBox5);
-			this->panelloginright->Controls->Add(this->pictureBox4);
-			this->panelloginright->Controls->Add(this->password);
-			this->panelloginright->Controls->Add(this->username);
-			this->panelloginright->Controls->Add(this->panel4);
-			this->panelloginright->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->panelloginright->Location = System::Drawing::Point(0, 0);
-			this->panelloginright->Name = L"panelloginright";
-			this->panelloginright->Size = System::Drawing::Size(677, 595);
-			this->panelloginright->TabIndex = 94;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->BackColor = System::Drawing::Color::White;
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(199, 408);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(47, 49);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox5->TabIndex = 34;
-			this->pictureBox5->TabStop = false;
-			// 
-			// pictureBox4
-			// 
-			this->pictureBox4->BackColor = System::Drawing::Color::White;
-			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
-			this->pictureBox4->Location = System::Drawing::Point(198, 343);
-			this->pictureBox4->Name = L"pictureBox4";
-			this->pictureBox4->Size = System::Drawing::Size(48, 49);
-			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox4->TabIndex = 33;
-			this->pictureBox4->TabStop = false;
-			// 
-			// password
-			// 
-			this->password->BackColor = System::Drawing::Color::White;
-			this->password->BorderColorFocused = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->password->BorderColorIdle = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
-				static_cast<System::Int32>(static_cast<System::Byte>(65)));
-			this->password->BorderColorMouseHover = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->password->BorderThickness = 3;
-			this->password->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->password->Font = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->password->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->password->isPassword = true;
-			this->password->Location = System::Drawing::Point(190, 400);
-			this->password->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
-			this->password->Name = L"password";
-			this->password->Padding = System::Windows::Forms::Padding(60, 5, 0, 0);
-			this->password->Size = System::Drawing::Size(310, 64);
-			this->password->TabIndex = 27;
-			this->password->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			// 
-			// username
-			// 
-			this->username->BackColor = System::Drawing::Color::White;
-			this->username->BorderColorFocused = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->username->BorderColorIdle = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
-				static_cast<System::Int32>(static_cast<System::Byte>(65)));
-			this->username->BorderColorMouseHover = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->username->BorderThickness = 3;
-			this->username->Cursor = System::Windows::Forms::Cursors::IBeam;
-			this->username->Font = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->username->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->username->isPassword = false;
-			this->username->Location = System::Drawing::Point(190, 335);
-			this->username->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
-			this->username->Name = L"username";
-			this->username->Padding = System::Windows::Forms::Padding(60, 5, 0, 0);
-			this->username->Size = System::Drawing::Size(310, 64);
-			this->username->TabIndex = 26;
-			this->username->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
-			// 
-			// panel4
-			// 
-			this->panel4->BackColor = System::Drawing::Color::White;
-			this->panel4->Controls->Add(this->label27);
-			this->panel4->Controls->Add(this->pictureBox3);
-			this->panel4->Controls->Add(this->b_login);
-			this->panel4->Location = System::Drawing::Point(47, 46);
-			this->panel4->Name = L"panel4";
-			this->panel4->Size = System::Drawing::Size(583, 501);
-			this->panel4->TabIndex = 32;
-			// 
-			// label27
-			// 
-			this->label27->AutoSize = true;
-			this->label27->Font = (gcnew System::Drawing::Font(L"Century Gothic", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label27->Location = System::Drawing::Point(194, 239);
-			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(206, 44);
-			this->label27->TabIndex = 32;
-			this->label27->Text = L"- SIGN IN -";
-			// 
-			// pictureBox3
-			// 
-			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
-			this->pictureBox3->Location = System::Drawing::Point(196, 33);
-			this->pictureBox3->Name = L"pictureBox3";
-			this->pictureBox3->Size = System::Drawing::Size(200, 200);
-			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-			this->pictureBox3->TabIndex = 31;
-			this->pictureBox3->TabStop = false;
-			// 
-			// b_login
-			// 
-			this->b_login->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
-				static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->b_login->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
-				static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->b_login->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->b_login->BorderRadius = 0;
-			this->b_login->ButtonText = L"LOGIN";
-			this->b_login->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->b_login->DisabledColor = System::Drawing::Color::Gray;
-			this->b_login->Iconcolor = System::Drawing::Color::Transparent;
-			this->b_login->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_login.Iconimage")));
-			this->b_login->Iconimage_right = nullptr;
-			this->b_login->Iconimage_right_Selected = nullptr;
-			this->b_login->Iconimage_Selected = nullptr;
-			this->b_login->IconMarginLeft = 0;
-			this->b_login->IconMarginRight = 0;
-			this->b_login->IconRightVisible = true;
-			this->b_login->IconRightZoom = 0;
-			this->b_login->IconVisible = true;
-			this->b_login->IconZoom = 90;
-			this->b_login->IsTab = false;
-			this->b_login->Location = System::Drawing::Point(240, 422);
-			this->b_login->Name = L"b_login";
-			this->b_login->Normalcolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
-				static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->b_login->OnHovercolor = System::Drawing::Color::DarkOrange;
-			this->b_login->OnHoverTextColor = System::Drawing::Color::White;
-			this->b_login->selected = false;
-			this->b_login->Size = System::Drawing::Size(130, 48);
-			this->b_login->TabIndex = 30;
-			this->b_login->Text = L"LOGIN";
-			this->b_login->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->b_login->Textcolor = System::Drawing::Color::White;
-			this->b_login->TextFont = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->b_login->Click += gcnew System::EventHandler(this, &FormMenu::b_login_Click);
 			// 
 			// b_savesale
 			// 
@@ -1457,9 +1782,8 @@ private: System::Windows::Forms::Label^  label27;
 			this->stateuser->ForeColor = System::Drawing::Color::White;
 			this->stateuser->Location = System::Drawing::Point(406, 34);
 			this->stateuser->Name = L"stateuser";
-			this->stateuser->Size = System::Drawing::Size(79, 21);
+			this->stateuser->Size = System::Drawing::Size(0, 21);
 			this->stateuser->TabIndex = 6;
-			this->stateuser->Text = L"ผู้จัดการร้าน";
 			// 
 			// pictureBox2
 			// 
@@ -1518,7 +1842,7 @@ private: System::Windows::Forms::Label^  label27;
 			// 
 			this->panelMenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(65)));
-			this->panelMenu->Controls->Add(this->panelloginleft);
+			this->panelMenu->Controls->Add(this->b_user);
 			this->panelMenu->Controls->Add(this->b_itemreport);
 			this->panelMenu->Controls->Add(this->b_itemedit);
 			this->panelMenu->Controls->Add(this->b_itemadd);
@@ -1531,65 +1855,47 @@ private: System::Windows::Forms::Label^  label27;
 			this->panelMenu->Size = System::Drawing::Size(223, 673);
 			this->panelMenu->TabIndex = 1;
 			// 
-			// panelloginleft
+			// b_user
 			// 
-			this->panelloginleft->Controls->Add(this->panel1);
-			this->panelloginleft->Controls->Add(this->b_loginmenu);
-			this->panelloginleft->Location = System::Drawing::Point(0, 78);
-			this->panelloginleft->Name = L"panelloginleft";
-			this->panelloginleft->Size = System::Drawing::Size(223, 595);
-			this->panelloginleft->TabIndex = 94;
-			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
-				static_cast<System::Int32>(static_cast<System::Byte>(55)));
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->panel1->Location = System::Drawing::Point(0, 62);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(223, 533);
-			this->panel1->TabIndex = 6;
-			// 
-			// b_loginmenu
-			// 
-			this->b_loginmenu->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(33)),
+			this->b_user->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(33)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->b_loginmenu->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+			this->b_user->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(65)));
-			this->b_loginmenu->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->b_loginmenu->BorderRadius = 0;
-			this->b_loginmenu->ButtonText = L"   LOGIN";
-			this->b_loginmenu->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->b_loginmenu->DisabledColor = System::Drawing::Color::Gray;
-			this->b_loginmenu->Dock = System::Windows::Forms::DockStyle::Top;
-			this->b_loginmenu->Iconcolor = System::Drawing::Color::Transparent;
-			this->b_loginmenu->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_loginmenu.Iconimage")));
-			this->b_loginmenu->Iconimage_right = nullptr;
-			this->b_loginmenu->Iconimage_right_Selected = nullptr;
-			this->b_loginmenu->Iconimage_Selected = nullptr;
-			this->b_loginmenu->IconMarginLeft = 0;
-			this->b_loginmenu->IconMarginRight = 0;
-			this->b_loginmenu->IconRightVisible = true;
-			this->b_loginmenu->IconRightZoom = 0;
-			this->b_loginmenu->IconVisible = true;
-			this->b_loginmenu->IconZoom = 90;
-			this->b_loginmenu->IsTab = false;
-			this->b_loginmenu->Location = System::Drawing::Point(0, 0);
-			this->b_loginmenu->Name = L"b_loginmenu";
-			this->b_loginmenu->Normalcolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+			this->b_user->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_user->BorderRadius = 0;
+			this->b_user->ButtonText = L"   USER";
+			this->b_user->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_user->DisabledColor = System::Drawing::Color::Gray;
+			this->b_user->Dock = System::Windows::Forms::DockStyle::Top;
+			this->b_user->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_user->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_user.Iconimage")));
+			this->b_user->Iconimage_right = nullptr;
+			this->b_user->Iconimage_right_Selected = nullptr;
+			this->b_user->Iconimage_Selected = nullptr;
+			this->b_user->IconMarginLeft = 0;
+			this->b_user->IconMarginRight = 0;
+			this->b_user->IconRightVisible = true;
+			this->b_user->IconRightZoom = 0;
+			this->b_user->IconVisible = true;
+			this->b_user->IconZoom = 90;
+			this->b_user->IsTab = false;
+			this->b_user->Location = System::Drawing::Point(0, 326);
+			this->b_user->Name = L"b_user";
+			this->b_user->Normalcolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
 				static_cast<System::Int32>(static_cast<System::Byte>(65)));
-			this->b_loginmenu->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(33)),
+			this->b_user->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(21)), static_cast<System::Int32>(static_cast<System::Byte>(33)),
 				static_cast<System::Int32>(static_cast<System::Byte>(45)));
-			this->b_loginmenu->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
-				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
-			this->b_loginmenu->selected = false;
-			this->b_loginmenu->Size = System::Drawing::Size(223, 62);
-			this->b_loginmenu->TabIndex = 5;
-			this->b_loginmenu->Text = L"   LOGIN";
-			this->b_loginmenu->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->b_loginmenu->Textcolor = System::Drawing::Color::White;
-			this->b_loginmenu->TextFont = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->b_user->OnHoverTextColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->b_user->selected = false;
+			this->b_user->Size = System::Drawing::Size(223, 62);
+			this->b_user->TabIndex = 95;
+			this->b_user->Text = L"   USER";
+			this->b_user->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_user->Textcolor = System::Drawing::Color::White;
+			this->b_user->TextFont = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->b_user->Click += gcnew System::EventHandler(this, &FormMenu::b_user_Click);
 			// 
 			// b_itemreport
 			// 
@@ -1806,6 +2112,161 @@ private: System::Windows::Forms::Label^  label27;
 			this->pictureBox1->TabIndex = 6;
 			this->pictureBox1->TabStop = false;
 			// 
+			// panelloginright
+			// 
+			this->panelloginright->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
+				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->panelloginright->Controls->Add(this->pictureBox5);
+			this->panelloginright->Controls->Add(this->pictureBox4);
+			this->panelloginright->Controls->Add(this->password);
+			this->panelloginright->Controls->Add(this->username);
+			this->panelloginright->Controls->Add(this->panel4);
+			this->panelloginright->Location = System::Drawing::Point(0, 78);
+			this->panelloginright->Name = L"panelloginright";
+			this->panelloginright->Size = System::Drawing::Size(900, 595);
+			this->panelloginright->TabIndex = 94;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackColor = System::Drawing::Color::White;
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(303, 408);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(47, 49);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox5->TabIndex = 34;
+			this->pictureBox5->TabStop = false;
+			// 
+			// pictureBox4
+			// 
+			this->pictureBox4->BackColor = System::Drawing::Color::White;
+			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
+			this->pictureBox4->Location = System::Drawing::Point(302, 343);
+			this->pictureBox4->Name = L"pictureBox4";
+			this->pictureBox4->Size = System::Drawing::Size(48, 49);
+			this->pictureBox4->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox4->TabIndex = 33;
+			this->pictureBox4->TabStop = false;
+			// 
+			// password
+			// 
+			this->password->BackColor = System::Drawing::Color::White;
+			this->password->BorderColorFocused = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
+				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->password->BorderColorIdle = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(65)));
+			this->password->BorderColorMouseHover = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
+				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->password->BorderThickness = 3;
+			this->password->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->password->Font = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->password->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->password->isPassword = true;
+			this->password->Location = System::Drawing::Point(294, 400);
+			this->password->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
+			this->password->Name = L"password";
+			this->password->Padding = System::Windows::Forms::Padding(60, 5, 0, 0);
+			this->password->Size = System::Drawing::Size(310, 64);
+			this->password->TabIndex = 27;
+			this->password->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// username
+			// 
+			this->username->BackColor = System::Drawing::Color::White;
+			this->username->BorderColorFocused = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
+				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->username->BorderColorIdle = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
+				static_cast<System::Int32>(static_cast<System::Byte>(65)));
+			this->username->BorderColorMouseHover = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)),
+				static_cast<System::Int32>(static_cast<System::Byte>(126)), static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->username->BorderThickness = 3;
+			this->username->Cursor = System::Windows::Forms::Cursors::IBeam;
+			this->username->Font = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->username->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->username->isPassword = false;
+			this->username->Location = System::Drawing::Point(294, 335);
+			this->username->Margin = System::Windows::Forms::Padding(6, 6, 6, 6);
+			this->username->Name = L"username";
+			this->username->Padding = System::Windows::Forms::Padding(60, 5, 0, 0);
+			this->username->Size = System::Drawing::Size(310, 64);
+			this->username->TabIndex = 26;
+			this->username->TextAlign = System::Windows::Forms::HorizontalAlignment::Left;
+			// 
+			// panel4
+			// 
+			this->panel4->BackColor = System::Drawing::Color::White;
+			this->panel4->Controls->Add(this->label27);
+			this->panel4->Controls->Add(this->pictureBox3);
+			this->panel4->Controls->Add(this->b_login);
+			this->panel4->Location = System::Drawing::Point(51, 46);
+			this->panel4->Name = L"panel4";
+			this->panel4->Size = System::Drawing::Size(797, 501);
+			this->panel4->TabIndex = 32;
+			// 
+			// label27
+			// 
+			this->label27->AutoSize = true;
+			this->label27->Font = (gcnew System::Drawing::Font(L"Century Gothic", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label27->Location = System::Drawing::Point(298, 239);
+			this->label27->Name = L"label27";
+			this->label27->Size = System::Drawing::Size(206, 44);
+			this->label27->TabIndex = 32;
+			this->label27->Text = L"- SIGN IN -";
+			// 
+			// pictureBox3
+			// 
+			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
+			this->pictureBox3->Location = System::Drawing::Point(300, 33);
+			this->pictureBox3->Name = L"pictureBox3";
+			this->pictureBox3->Size = System::Drawing::Size(200, 200);
+			this->pictureBox3->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
+			this->pictureBox3->TabIndex = 31;
+			this->pictureBox3->TabStop = false;
+			// 
+			// b_login
+			// 
+			this->b_login->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->b_login->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->b_login->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_login->BorderRadius = 0;
+			this->b_login->ButtonText = L"LOGIN";
+			this->b_login->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_login->DisabledColor = System::Drawing::Color::Gray;
+			this->b_login->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_login->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_login.Iconimage")));
+			this->b_login->Iconimage_right = nullptr;
+			this->b_login->Iconimage_right_Selected = nullptr;
+			this->b_login->Iconimage_Selected = nullptr;
+			this->b_login->IconMarginLeft = 0;
+			this->b_login->IconMarginRight = 0;
+			this->b_login->IconRightVisible = true;
+			this->b_login->IconRightZoom = 0;
+			this->b_login->IconVisible = true;
+			this->b_login->IconZoom = 90;
+			this->b_login->IsTab = false;
+			this->b_login->Location = System::Drawing::Point(331, 422);
+			this->b_login->Name = L"b_login";
+			this->b_login->Normalcolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(229)), static_cast<System::Int32>(static_cast<System::Byte>(126)),
+				static_cast<System::Int32>(static_cast<System::Byte>(49)));
+			this->b_login->OnHovercolor = System::Drawing::Color::DarkOrange;
+			this->b_login->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_login->selected = false;
+			this->b_login->Size = System::Drawing::Size(130, 48);
+			this->b_login->TabIndex = 30;
+			this->b_login->Text = L"LOGIN";
+			this->b_login->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_login->Textcolor = System::Drawing::Color::White;
+			this->b_login->TextFont = (gcnew System::Drawing::Font(L"Cloud", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_login->Click += gcnew System::EventHandler(this, &FormMenu::b_login_Click);
+			// 
 			// FormMenu
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -1818,14 +2279,10 @@ private: System::Windows::Forms::Label^  label27;
 			this->Text = L"KitCash";
 			this->Load += gcnew System::EventHandler(this, &FormMenu::FormMenu_Load);
 			this->panelmain->ResumeLayout(false);
+			this->paneluser->ResumeLayout(false);
+			this->paneluser->PerformLayout();
 			this->panelsale->ResumeLayout(false);
 			this->panelsale->PerformLayout();
-			this->panelloginright->ResumeLayout(false);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
-			this->panel4->ResumeLayout(false);
-			this->panel4->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->qty))->EndInit();
 			this->paneladd->ResumeLayout(false);
@@ -1837,10 +2294,15 @@ private: System::Windows::Forms::Label^  label27;
 			this->panelHeader->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			this->panelMenu->ResumeLayout(false);
-			this->panelloginleft->ResumeLayout(false);
 			this->panelLogo->ResumeLayout(false);
 			this->panelLogo->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			this->panelloginright->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
+			this->panel4->ResumeLayout(false);
+			this->panel4->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -1853,6 +2315,7 @@ private: System::Void pro_idedit_TextChanged(System::Object^  sender, System::Ev
 	try
 	{
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2035,6 +2498,7 @@ private: System::Void pro_id_TextChanged(System::Object^  sender, System::EventA
 	try
 	{
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2132,6 +2596,7 @@ private: void Trid()
 	try
 	{
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2199,18 +2664,28 @@ private: System::Void b_savesale_Click(System::Object^  sender, System::EventArg
 //Code for Main
 private: bool dragging;
 private: Point offset;
-
+private: void checkprocess()
+{
+	array<Process^>^localByName = Process::GetProcessesByName("Reporting");
+	if (localByName->Length == 0)
+	{
+		Form::Text = L"KitCash";
+	}
+}
 private: System::Void FormMenu_Load(System::Object^  sender, System::EventArgs^  e)
 {
 	Connection2::connnectsql();
 	this->dragging = false;
+	//Form::Text = L"KitCash - Menu";
+	stateuser->Text = "";
 	Trid();
 	panelloginright->Visible = true;
 	panelsale->Visible = true;
 	paneladd->Visible = false;
 	paneledit->Visible = false;
-	stateuser->Text = "";
+	paneluser->Visible = false;
 	loadinventory();
+	checkprocess();
 
 	String^ path = System::IO::Directory::GetCurrentDirectory();
 	Connection2::executesql("INSERT INTO Path (path) VALUES ('" + path + "')");
@@ -2250,7 +2725,7 @@ private: System::Void panelLogo_MouseUp(System::Object^  sender, System::Windows
 }
 private: System::Void exit_Click(System::Object^  sender, System::EventArgs^  e)
 {
-	Close();
+	this->Close();
 }
 private: System::Void min_Click(System::Object^  sender, System::EventArgs^  e)
 {
@@ -2262,6 +2737,7 @@ private: System::Void b_itemsale_Click(System::Object^  sender, System::EventArg
 	panelsale->Visible = true;
 	paneladd->Visible = false;
 	paneledit->Visible = false;
+	paneluser->Visible = false;
 }
 private: System::Void b_itemadd_Click(System::Object^  sender, System::EventArgs^  e)
 {
@@ -2269,6 +2745,7 @@ private: System::Void b_itemadd_Click(System::Object^  sender, System::EventArgs
 	panelsale->Visible = false;
 	paneladd->Visible = true;
 	paneledit->Visible = false;
+	paneluser->Visible = false;
 	loadinventory();
 }
 private: System::Void b_itemedit_Click(System::Object^  sender, System::EventArgs^  e)
@@ -2277,6 +2754,7 @@ private: System::Void b_itemedit_Click(System::Object^  sender, System::EventArg
 	panelsale->Visible = false;
 	paneladd->Visible = false;
 	paneledit->Visible = true;
+	paneluser->Visible = false;
 }
 
 
@@ -2288,15 +2766,47 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 {
 	DataTable^ checkpath = Connection2::executesql("SELECT * FROM Path");
 	int check = checkpath->Rows->Count;
+	String^ check2 = Convert::ToString(check);
 	try
 	{
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
 		SqlConnection^ con = gcnew SqlConnection(strcon);
 
 		con->Open();
 
-		SqlCommand^ cmd = gcnew SqlCommand("SELECT path FROM Path WHERE ID = '" + check + "'", con);
+		SqlCommand^ cmdemp = gcnew SqlCommand("SELECT Emp_Id FROM Tbl_Employee WHERE Emp_Name = '" + emp->Text + "'", con);
+
+		SqlDataReader^ reademp = cmdemp->ExecuteReader();
+
+		if (reademp->Read())
+		{
+			String^ id = reademp["Emp_Id"]->ToString();
+			Form::Text = L"KitCash - " + id;
+		}
+		else
+		{
+			Form::Text = L"KitCash";
+		}
+
+		con->Close();
+
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+	try
+	{
+		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+
+		SqlConnection^ con = gcnew SqlConnection(strcon);
+
+		con->Open();
+
+		SqlCommand^ cmd = gcnew SqlCommand("SELECT path FROM Path WHERE ID = '" + check2 + "'", con);
 
 		SqlDataReader^ reader = cmd->ExecuteReader();
 
@@ -2332,11 +2842,11 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 	{
 		MessageBox::Show("สำเร็จ", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
 		panelloginright->Visible = false;
-		panelloginleft->Visible = false;
 		labelheader->Text = "ITEM_SALE";
 		try
 		{
 			String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+			/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
 
 			SqlConnection^ con = gcnew SqlConnection(strcon);
 
@@ -2350,6 +2860,11 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 			{
 				stateuser->Text = readeremp["Emp_Name"]->ToString();
 				emp->Text = readeremp["Emp_Name"]->ToString();
+				String^ admin = "เจ้าของร้าน";
+				if (stateuser->Text != "เจ้าของร้าน")
+				{
+					b_user->Visible = false;
+				}
 			}
 			else
 			{
@@ -2367,6 +2882,241 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 	else
 	{
 		MessageBox::Show("ไม่สำเร็จ", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+	}
+}
+
+//Code for user
+//Code for user
+//Code for user
+
+
+private: System::Void b_user_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	labelheader->Text = "EDIT USER";
+	Empid();
+	emp_id->ReadOnly = true;
+	paneluser->Visible = true;
+	panelsale->Visible = false;
+	paneladd->Visible = false;
+	paneledit->Visible = false;
+
+	//try
+	//{
+	//	/*String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";*/
+	//	String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";
+
+	//	SqlConnection^ con = gcnew SqlConnection(strcon);
+
+	//	con->Open();
+
+	//	String^ admin = "เจ้าของร้าน";
+
+	//	SqlCommand^ cmdemp = gcnew SqlCommand("select * from tbl_employee where permission = '" + admin + "'", con);
+
+	//	SqlDataReader^ readeremp = cmdemp->ExecuteReader();
+
+
+	//	if (readeremp->Read())
+	//	{
+	//		paneluser->Visible = true;
+	//		panelsale->Visible = false;
+	//		paneladd->Visible = false;
+	//		paneledit->Visible = false;
+	//		labelheader->Text = "EDIT USER";
+	//	}
+	//	else
+	//	{
+	//		MessageBox::Show("สถานะของคุณไม่ได้รับอนุญาต", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+	//	}
+
+	//	con->Close();
+
+	//}
+	//catch (Exception^ ex)
+	//{
+	//	MessageBox::Show(ex->Message);
+	//}
+}
+private: void Empid()
+{
+	try
+	{
+		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+
+		SqlConnection^ con = gcnew SqlConnection(strcon);
+
+		con->Open();
+
+		SqlCommand^ cmd = gcnew SqlCommand("select count(Emp_Id) as autonumber from Tbl_Employee", con);
+
+		SqlDataReader^ reader = cmd->ExecuteReader();
+
+		if (reader->Read())
+		{
+			int id = Convert::ToInt32(reader["autonumber"]);
+			emp_id->Text = "EMP-000" + Convert::ToString(id);
+		}
+		else
+		{
+			emp_id->Text = "";
+		}
+
+		con->Close();
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+private: System::Void b_data_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+		if (checkBox1->Checked == false)
+		{
+			if (MessageBox::Show("คุณต้องการบันทึกข้อมูลหรือไม่", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
+			{
+				MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				Connection2::executesql("insert into Tbl_Employee(Emp_Id, Emp_Name, Permission, Address1, Address2, Address3, Address4, Address5, Phone1, Phone2, Email, FB, Line, Note) values('" + emp_id->Text + "', '" + emp_name->Text + "', '" + "พนักงานขาย" + "', '" + address1->Text + "', '" + address2->Text + "', '" + address3->Text + "', '" + address4->Text + "', '" + address5->Text + "', '" + phone1->Text + "', '" + phone2->Text + "', '" + email->Text + "', '" + fb->Text + "', '" + line->Text + "', '" + note->Text + "')");
+				emp_name->Text = "";
+				address1->Text = "";
+				address2->Text = "";
+				address3->Text = "";
+				address4->Text = "";
+				address5->Text = "";
+				phone1->Text = "";
+				phone2->Text = "";
+				email->Text = "";
+				fb->Text = "";
+				line->Text = "";
+				note->Text = "";
+				Empid();
+			}
+		}
+		else
+		{
+			try
+			{
+				/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+				String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+				SqlConnection^ con = gcnew SqlConnection(strcon);
+
+				con->Open();
+
+				SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'", con);
+
+				SqlDataReader^ reader = cmd->ExecuteReader();
+
+				if (MessageBox::Show("คุณต้องการบันทึกข้อมูลหรือไม่", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
+				{
+					if (reader->Read())
+					{
+						MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+						Connection2::executesql("UPDATE Tbl_Employee SET Emp_Name = '" + emp_name->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Address1 = '" + address1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Address2 = '" + address2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Address3 = '" + address3->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Address4 = '" + address4->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Address5 = '" + address5->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Phone1 = '" + phone1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Phone2 = '" + phone2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Email = '" + email->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET FB = '" + fb->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Line = '" + line->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+						Connection2::executesql("UPDATE Tbl_Employee SET Note = '" + note->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					}
+					else
+					{
+						MessageBox::Show("ไม่พบรหัสพนักงงานในระบบ", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+						emp_id->Text = "";
+						emp_name->Text = "";
+						address1->Text = "";
+						address2->Text = "";
+						address3->Text = "";
+						address4->Text = "";
+						address5->Text = "";
+						phone1->Text = "";
+						phone2->Text = "";
+						email->Text = "";
+						fb->Text = "";
+						line->Text = "";
+						note->Text = "";
+						return;
+					}
+				}
+				con->Close();
+			}
+			catch (Exception^ ex)
+			{
+				MessageBox::Show(ex->Message);
+			}	
+		}
+}
+
+private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (checkBox1->Checked == true)
+	{
+		emp_id->ReadOnly = false;
+		emp_id->Clear();
+	}
+	else
+	{
+		emp_id->ReadOnly = true;
+		Empid();
+	}
+}
+private: System::Void emp_id_TextChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	try
+	{
+		/*String^ strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";*/
+		String^ strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
+		SqlConnection^ con = gcnew SqlConnection(strcon);
+
+		con->Open();
+
+		SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'", con);
+
+		SqlDataReader^ reader = cmd->ExecuteReader();
+
+		if (reader->Read())
+		{
+			emp_name->Text = reader["Emp_Name"]->ToString();
+			address1->Text = reader["Address1"]->ToString();
+			address2->Text = reader["Address2"]->ToString();
+			address3->Text = reader["Address3"]->ToString();
+			address4->Text = reader["Address4"]->ToString();
+			address5->Text = reader["Address5"]->ToString();
+			phone1->Text = reader["Phone1"]->ToString();
+			phone2->Text = reader["Phone2"]->ToString();
+			email->Text = reader["Email"]->ToString();
+			fb->Text = reader["FB"]->ToString();
+			line->Text = reader["Line"]->ToString();
+			note->Text = reader["Note"]->ToString();
+		}
+		else
+		{
+			emp_name->Text = "";
+			address1->Text = "";
+			address2->Text = "";
+			address3->Text = "";
+			address4->Text = "";
+			address5->Text = "";
+			phone1->Text = "";
+			phone2->Text = "";
+			email->Text = "";
+			fb->Text = "";
+			line->Text = "";
+			note->Text = "";
+		}
+
+		con->Close();
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
 	}
 }
 };

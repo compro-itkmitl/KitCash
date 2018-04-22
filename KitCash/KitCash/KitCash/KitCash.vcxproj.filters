@@ -13,15 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Report">
-      <UniqueIdentifier>{5ed73e97-abc8-4274-a838-aa6a12b935c0}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FormMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Connection2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormLogin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -33,6 +33,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormLogin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,12 +50,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="icon1.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="icon2.ico">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="KitCash.ico">
       <Filter>Resource Files</Filter>
     </Image>

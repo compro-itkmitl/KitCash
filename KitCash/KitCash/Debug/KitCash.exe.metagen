@@ -1,3 +1,4 @@
+  KitCash.FormLogin.resources - Embedded, ContainedInManifestFile, 
   KitCash.FormMenu.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly KitCash, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
@@ -24,6 +25,9 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class KitCash.FormLogin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class KitCash.FormMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -34,6 +38,21 @@ Class KitCash.FormMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.TextBox pro_priceedit : Public
     System.Windows.Forms.TextBox pro_nameedit : Public
     System.Windows.Forms.TextBox pro_idedit : Public
+    System.Windows.Forms.TextBox emp : Public
+    System.Windows.Forms.Label stateuser : Public
+    System.Windows.Forms.TextBox address4 : Public
+    System.Windows.Forms.TextBox address3 : Public
+    System.Windows.Forms.TextBox address2 : Public
+    System.Windows.Forms.TextBox address1 : Public
+    System.Windows.Forms.TextBox emp_name : Public
+    System.Windows.Forms.TextBox emp_id : Public
+    System.Windows.Forms.TextBox note : Public
+    System.Windows.Forms.TextBox line : Public
+    System.Windows.Forms.TextBox fb : Public
+    System.Windows.Forms.TextBox email : Public
+    System.Windows.Forms.TextBox phone2 : Public
+    System.Windows.Forms.TextBox phone1 : Public
+    System.Windows.Forms.TextBox address5 : Public
   Methods:
     loadinventory(): PrivateScope, Public, HideBySig
     cleardata(): PrivateScope, Public, HideBySig
