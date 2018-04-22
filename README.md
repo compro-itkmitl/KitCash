@@ -57,7 +57,7 @@
     - ![](Pics/sl4.png)
     - ![](Pics/sl5.png)
     - ![](Pics/sl6.png)
-    - ![](Pics/sell7.png)
+    - ![](Pics/sell7.PNG)
     - เมื่อทำการส่งเข้าไลน์ จะแสดงผลตามรูป
 # Members
 |  |ชื่อ|นามสกุล|GitHub Username|รหัสนักศึกษา|
