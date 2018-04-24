@@ -1,0 +1,1 @@
+Data Source=(LocalDB)\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\Minimart.mdf; Integrated Security = True;
