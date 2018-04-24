@@ -21,7 +21,7 @@
     <ClCompile Include="Connection2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FormLogin.cpp">
+    <ClCompile Include="ConnectionOnline.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,12 +35,15 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FormLogin.h">
+    <ClInclude Include="ConnectionOnline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormMenu.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

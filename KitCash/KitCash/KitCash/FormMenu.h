@@ -1,6 +1,5 @@
 #pragma once
 #include "Connection2.h"
-#include "FormLogin.h"
 
 namespace KitCash {
 
@@ -14,6 +13,7 @@ namespace KitCash {
 	using namespace System::Runtime::InteropServices;
 	using namespace System::Threading;
 	using namespace Microsoft::Win32;
+	using namespace System::IO;
 
 	/// <summary>
 	/// Summary for FormMenu
@@ -203,6 +203,47 @@ public: System::Windows::Forms::TextBox^  phone1;
 
 public: System::Windows::Forms::TextBox^  address5;
 private: System::Windows::Forms::CheckBox^  checkBox1;
+private: Bunifu::Framework::UI::BunifuFlatButton^  b_setting;
+private: System::Windows::Forms::Panel^  panelsetting;
+public: System::Windows::Forms::TextBox^  dtbase;
+private:
+public: System::Windows::Forms::TextBox^  dtsource;
+public: System::Windows::Forms::CheckBox^  checkString;
+public: System::Windows::Forms::CheckBox^  checkOffline;
+public: System::Windows::Forms::CheckBox^  checkOnline;
+
+
+
+
+
+
+
+public: System::Windows::Forms::TextBox^  pas;
+private:
+public: System::Windows::Forms::TextBox^  use;
+
+
+
+
+private: System::Windows::Forms::Label^  label41;
+public: System::Windows::Forms::TextBox^  cns;
+private:
+
+
+
+private: System::Windows::Forms::Label^  label44;
+private: System::Windows::Forms::Label^  label43;
+private: System::Windows::Forms::Label^  label42;
+private: System::Windows::Forms::Label^  label45;
+private: Bunifu::Framework::UI::BunifuFlatButton^  b_saveset;
+private: Bunifu::Framework::UI::BunifuFlatButton^  b_test;
+public: System::Windows::Forms::CheckBox^  checkCn;
+private: System::Windows::Forms::Panel^  panel1;
+public:
+private: System::Windows::Forms::LinkLabel^  linkLabel1;
+private: System::Windows::Forms::Label^  label46;
+private: System::Windows::Forms::Label^  label47;
+private:
 public:
 
 
@@ -230,35 +271,6 @@ public:
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->panelmain = (gcnew System::Windows::Forms::Panel());
-			this->paneluser = (gcnew System::Windows::Forms::Panel());
-			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
-			this->label40 = (gcnew System::Windows::Forms::Label());
-			this->label39 = (gcnew System::Windows::Forms::Label());
-			this->label38 = (gcnew System::Windows::Forms::Label());
-			this->label37 = (gcnew System::Windows::Forms::Label());
-			this->label36 = (gcnew System::Windows::Forms::Label());
-			this->label35 = (gcnew System::Windows::Forms::Label());
-			this->label34 = (gcnew System::Windows::Forms::Label());
-			this->note = (gcnew System::Windows::Forms::TextBox());
-			this->line = (gcnew System::Windows::Forms::TextBox());
-			this->fb = (gcnew System::Windows::Forms::TextBox());
-			this->email = (gcnew System::Windows::Forms::TextBox());
-			this->phone2 = (gcnew System::Windows::Forms::TextBox());
-			this->phone1 = (gcnew System::Windows::Forms::TextBox());
-			this->address5 = (gcnew System::Windows::Forms::TextBox());
-			this->address4 = (gcnew System::Windows::Forms::TextBox());
-			this->address3 = (gcnew System::Windows::Forms::TextBox());
-			this->address2 = (gcnew System::Windows::Forms::TextBox());
-			this->address1 = (gcnew System::Windows::Forms::TextBox());
-			this->emp_name = (gcnew System::Windows::Forms::TextBox());
-			this->emp_id = (gcnew System::Windows::Forms::TextBox());
-			this->b_data = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
-			this->label28 = (gcnew System::Windows::Forms::Label());
-			this->label29 = (gcnew System::Windows::Forms::Label());
-			this->label30 = (gcnew System::Windows::Forms::Label());
-			this->label31 = (gcnew System::Windows::Forms::Label());
-			this->label32 = (gcnew System::Windows::Forms::Label());
-			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->panelsale = (gcnew System::Windows::Forms::Panel());
 			this->b_savesale = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->label13 = (gcnew System::Windows::Forms::Label());
@@ -326,6 +338,35 @@ public:
 			this->label24 = (gcnew System::Windows::Forms::Label());
 			this->label25 = (gcnew System::Windows::Forms::Label());
 			this->label26 = (gcnew System::Windows::Forms::Label());
+			this->paneluser = (gcnew System::Windows::Forms::Panel());
+			this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->note = (gcnew System::Windows::Forms::TextBox());
+			this->line = (gcnew System::Windows::Forms::TextBox());
+			this->fb = (gcnew System::Windows::Forms::TextBox());
+			this->email = (gcnew System::Windows::Forms::TextBox());
+			this->phone2 = (gcnew System::Windows::Forms::TextBox());
+			this->phone1 = (gcnew System::Windows::Forms::TextBox());
+			this->address5 = (gcnew System::Windows::Forms::TextBox());
+			this->address4 = (gcnew System::Windows::Forms::TextBox());
+			this->address3 = (gcnew System::Windows::Forms::TextBox());
+			this->address2 = (gcnew System::Windows::Forms::TextBox());
+			this->address1 = (gcnew System::Windows::Forms::TextBox());
+			this->emp_name = (gcnew System::Windows::Forms::TextBox());
+			this->emp_id = (gcnew System::Windows::Forms::TextBox());
+			this->b_data = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
+			this->label28 = (gcnew System::Windows::Forms::Label());
+			this->label29 = (gcnew System::Windows::Forms::Label());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
 			this->panelHeader = (gcnew System::Windows::Forms::Panel());
 			this->stateuser = (gcnew System::Windows::Forms::Label());
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
@@ -343,6 +384,28 @@ public:
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->panelloginright = (gcnew System::Windows::Forms::Panel());
+			this->panelsetting = (gcnew System::Windows::Forms::Panel());
+			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label47 = (gcnew System::Windows::Forms::Label());
+			this->linkLabel1 = (gcnew System::Windows::Forms::LinkLabel());
+			this->label46 = (gcnew System::Windows::Forms::Label());
+			this->checkCn = (gcnew System::Windows::Forms::CheckBox());
+			this->b_test = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
+			this->b_saveset = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
+			this->label45 = (gcnew System::Windows::Forms::Label());
+			this->label44 = (gcnew System::Windows::Forms::Label());
+			this->label43 = (gcnew System::Windows::Forms::Label());
+			this->label42 = (gcnew System::Windows::Forms::Label());
+			this->label41 = (gcnew System::Windows::Forms::Label());
+			this->cns = (gcnew System::Windows::Forms::TextBox());
+			this->pas = (gcnew System::Windows::Forms::TextBox());
+			this->use = (gcnew System::Windows::Forms::TextBox());
+			this->dtbase = (gcnew System::Windows::Forms::TextBox());
+			this->dtsource = (gcnew System::Windows::Forms::TextBox());
+			this->checkString = (gcnew System::Windows::Forms::CheckBox());
+			this->checkOffline = (gcnew System::Windows::Forms::CheckBox());
+			this->checkOnline = (gcnew System::Windows::Forms::CheckBox());
+			this->b_setting = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->pictureBox4 = (gcnew System::Windows::Forms::PictureBox());
 			this->password = (gcnew Bunifu::Framework::UI::BunifuMetroTextbox());
@@ -352,19 +415,21 @@ public:
 			this->pictureBox3 = (gcnew System::Windows::Forms::PictureBox());
 			this->b_login = (gcnew Bunifu::Framework::UI::BunifuFlatButton());
 			this->panelmain->SuspendLayout();
-			this->paneluser->SuspendLayout();
 			this->panelsale->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->qty))->BeginInit();
 			this->paneladd->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGVadd))->BeginInit();
 			this->paneledit->SuspendLayout();
+			this->paneluser->SuspendLayout();
 			this->panelHeader->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			this->panelMenu->SuspendLayout();
 			this->panelLogo->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->panelloginright->SuspendLayout();
+			this->panelsetting->SuspendLayout();
+			this->panel1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			this->panel4->SuspendLayout();
@@ -374,412 +439,18 @@ public:
 			// panelmain
 			// 
 			this->panelmain->BackColor = System::Drawing::Color::Gainsboro;
-			
 			this->panelmain->Controls->Add(this->panelloginright);
 			this->panelmain->Controls->Add(this->panelsale);
-			
 			this->panelmain->Controls->Add(this->paneladd);
 			this->panelmain->Controls->Add(this->paneledit);
 			this->panelmain->Controls->Add(this->paneluser);
 			this->panelmain->Controls->Add(this->panelHeader);
 			this->panelmain->Controls->Add(this->panelMenu);
-			
 			this->panelmain->Dock = System::Windows::Forms::DockStyle::Fill;
 			this->panelmain->Location = System::Drawing::Point(0, 0);
 			this->panelmain->Name = L"panelmain";
 			this->panelmain->Size = System::Drawing::Size(900, 673);
 			this->panelmain->TabIndex = 0;
-			// 
-			// paneluser
-			// 
-			this->paneluser->BackColor = System::Drawing::Color::Gainsboro;
-			this->paneluser->Controls->Add(this->checkBox1);
-			this->paneluser->Controls->Add(this->label40);
-			this->paneluser->Controls->Add(this->label39);
-			this->paneluser->Controls->Add(this->label38);
-			this->paneluser->Controls->Add(this->label37);
-			this->paneluser->Controls->Add(this->label36);
-			this->paneluser->Controls->Add(this->label35);
-			this->paneluser->Controls->Add(this->label34);
-			this->paneluser->Controls->Add(this->note);
-			this->paneluser->Controls->Add(this->line);
-			this->paneluser->Controls->Add(this->fb);
-			this->paneluser->Controls->Add(this->email);
-			this->paneluser->Controls->Add(this->phone2);
-			this->paneluser->Controls->Add(this->phone1);
-			this->paneluser->Controls->Add(this->address5);
-			this->paneluser->Controls->Add(this->address4);
-			this->paneluser->Controls->Add(this->address3);
-			this->paneluser->Controls->Add(this->address2);
-			this->paneluser->Controls->Add(this->address1);
-			this->paneluser->Controls->Add(this->emp_name);
-			this->paneluser->Controls->Add(this->emp_id);
-			this->paneluser->Controls->Add(this->b_data);
-			this->paneluser->Controls->Add(this->label28);
-			this->paneluser->Controls->Add(this->label29);
-			this->paneluser->Controls->Add(this->label30);
-			this->paneluser->Controls->Add(this->label31);
-			this->paneluser->Controls->Add(this->label32);
-			this->paneluser->Controls->Add(this->label33);
-			this->paneluser->Dock = System::Windows::Forms::DockStyle::Fill;
-			this->paneluser->Location = System::Drawing::Point(223, 78);
-			this->paneluser->Name = L"paneluser";
-			this->paneluser->Size = System::Drawing::Size(677, 595);
-			this->paneluser->TabIndex = 35;
-			// 
-			// checkBox1
-			// 
-			this->checkBox1->AutoSize = true;
-			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Cloud", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->checkBox1->Location = System::Drawing::Point(105, 22);
-			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(92, 25);
-			this->checkBox1->TabIndex = 85;
-			this->checkBox1->Text = L"แก้ไขข้อมูล";
-			this->checkBox1->UseVisualStyleBackColor = true;
-			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkBox1_CheckedChanged);
-			// 
-			// label40
-			// 
-			this->label40->AutoSize = true;
-			this->label40->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label40->Location = System::Drawing::Point(33, 297);
-			this->label40->Name = L"label40";
-			this->label40->Size = System::Drawing::Size(68, 21);
-			this->label40->TabIndex = 84;
-			this->label40->Text = L"หมายเหตุ :";
-			// 
-			// label39
-			// 
-			this->label39->AutoSize = true;
-			this->label39->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label39->Location = System::Drawing::Point(371, 293);
-			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(48, 21);
-			this->label39->TabIndex = 83;
-			this->label39->Text = L"Line :";
-			// 
-			// label38
-			// 
-			this->label38->AutoSize = true;
-			this->label38->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label38->Location = System::Drawing::Point(333, 254);
-			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(86, 21);
-			this->label38->TabIndex = 82;
-			this->label38->Text = L"Facebook :";
-			// 
-			// label37
-			// 
-			this->label37->AutoSize = true;
-			this->label37->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label37->Location = System::Drawing::Point(41, 256);
-			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(60, 21);
-			this->label37->TabIndex = 81;
-			this->label37->Text = L"E-Mail :";
-			// 
-			// label36
-			// 
-			this->label36->AutoSize = true;
-			this->label36->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label36->Location = System::Drawing::Point(367, 215);
-			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(52, 21);
-			this->label36->TabIndex = 80;
-			this->label36->Text = L"มือถือ :";
-			// 
-			// label35
-			// 
-			this->label35->AutoSize = true;
-			this->label35->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label35->Location = System::Drawing::Point(38, 215);
-			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(63, 21);
-			this->label35->TabIndex = 79;
-			this->label35->Text = L"โทรศัพท์ :";
-			// 
-			// label34
-			// 
-			this->label34->AutoSize = true;
-			this->label34->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label34->Location = System::Drawing::Point(352, 176);
-			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(67, 21);
-			this->label34->TabIndex = 78;
-			this->label34->Text = L"ไปรษณีย์ :";
-			// 
-			// note
-			// 
-			this->note->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->note->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->note->Location = System::Drawing::Point(105, 290);
-			this->note->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->note->Multiline = true;
-			this->note->Name = L"note";
-			this->note->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->note->Size = System::Drawing::Size(215, 181);
-			this->note->TabIndex = 77;
-			// 
-			// line
-			// 
-			this->line->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->line->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->line->Location = System::Drawing::Point(425, 290);
-			this->line->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->line->Name = L"line";
-			this->line->Size = System::Drawing::Size(215, 29);
-			this->line->TabIndex = 76;
-			// 
-			// fb
-			// 
-			this->fb->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->fb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->fb->Location = System::Drawing::Point(425, 251);
-			this->fb->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->fb->Name = L"fb";
-			this->fb->Size = System::Drawing::Size(215, 29);
-			this->fb->TabIndex = 75;
-			// 
-			// email
-			// 
-			this->email->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->email->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->email->Location = System::Drawing::Point(105, 251);
-			this->email->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->email->Name = L"email";
-			this->email->Size = System::Drawing::Size(215, 29);
-			this->email->TabIndex = 74;
-			// 
-			// phone2
-			// 
-			this->phone2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->phone2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->phone2->Location = System::Drawing::Point(425, 212);
-			this->phone2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->phone2->Name = L"phone2";
-			this->phone2->Size = System::Drawing::Size(215, 29);
-			this->phone2->TabIndex = 73;
-			// 
-			// phone1
-			// 
-			this->phone1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->phone1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->phone1->Location = System::Drawing::Point(105, 212);
-			this->phone1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->phone1->Name = L"phone1";
-			this->phone1->Size = System::Drawing::Size(215, 29);
-			this->phone1->TabIndex = 72;
-			// 
-			// address5
-			// 
-			this->address5->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->address5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->address5->Location = System::Drawing::Point(425, 173);
-			this->address5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->address5->Name = L"address5";
-			this->address5->Size = System::Drawing::Size(215, 29);
-			this->address5->TabIndex = 71;
-			// 
-			// address4
-			// 
-			this->address4->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->address4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->address4->Location = System::Drawing::Point(105, 173);
-			this->address4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->address4->Name = L"address4";
-			this->address4->Size = System::Drawing::Size(215, 29);
-			this->address4->TabIndex = 70;
-			// 
-			// address3
-			// 
-			this->address3->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->address3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->address3->Location = System::Drawing::Point(425, 134);
-			this->address3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->address3->Name = L"address3";
-			this->address3->Size = System::Drawing::Size(215, 29);
-			this->address3->TabIndex = 69;
-			// 
-			// address2
-			// 
-			this->address2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->address2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->address2->Location = System::Drawing::Point(105, 134);
-			this->address2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->address2->Name = L"address2";
-			this->address2->Size = System::Drawing::Size(215, 29);
-			this->address2->TabIndex = 68;
-			// 
-			// address1
-			// 
-			this->address1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->address1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->address1->Location = System::Drawing::Point(105, 95);
-			this->address1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->address1->Name = L"address1";
-			this->address1->Size = System::Drawing::Size(535, 29);
-			this->address1->TabIndex = 67;
-			// 
-			// emp_name
-			// 
-			this->emp_name->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->emp_name->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->emp_name->Location = System::Drawing::Point(425, 58);
-			this->emp_name->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->emp_name->Name = L"emp_name";
-			this->emp_name->Size = System::Drawing::Size(215, 29);
-			this->emp_name->TabIndex = 66;
-			// 
-			// emp_id
-			// 
-			this->emp_id->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->emp_id->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
-				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->emp_id->Location = System::Drawing::Point(105, 58);
-			this->emp_id->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
-			this->emp_id->Name = L"emp_id";
-			this->emp_id->ReadOnly = true;
-			this->emp_id->Size = System::Drawing::Size(215, 29);
-			this->emp_id->TabIndex = 65;
-			this->emp_id->TextChanged += gcnew System::EventHandler(this, &FormMenu::emp_id_TextChanged);
-			// 
-			// b_data
-			// 
-			this->b_data->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(139)),
-				static_cast<System::Int32>(static_cast<System::Byte>(87)));
-			this->b_data->BackColor = System::Drawing::Color::SeaGreen;
-			this->b_data->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->b_data->BorderRadius = 0;
-			this->b_data->ButtonText = L"บันทึกข้อมูล";
-			this->b_data->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->b_data->DisabledColor = System::Drawing::Color::Gray;
-			this->b_data->Iconcolor = System::Drawing::Color::Transparent;
-			this->b_data->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_data.Iconimage")));
-			this->b_data->Iconimage_right = nullptr;
-			this->b_data->Iconimage_right_Selected = nullptr;
-			this->b_data->Iconimage_Selected = nullptr;
-			this->b_data->IconMarginLeft = 0;
-			this->b_data->IconMarginRight = 0;
-			this->b_data->IconRightVisible = true;
-			this->b_data->IconRightZoom = 0;
-			this->b_data->IconVisible = true;
-			this->b_data->IconZoom = 90;
-			this->b_data->IsTab = false;
-			this->b_data->Location = System::Drawing::Point(370, 341);
-			this->b_data->Name = L"b_data";
-			this->b_data->Normalcolor = System::Drawing::Color::SeaGreen;
-			this->b_data->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
-				static_cast<System::Int32>(static_cast<System::Byte>(0)));
-			this->b_data->OnHoverTextColor = System::Drawing::Color::White;
-			this->b_data->selected = false;
-			this->b_data->Size = System::Drawing::Size(270, 130);
-			this->b_data->TabIndex = 65;
-			this->b_data->Text = L"บันทึกข้อมูล";
-			this->b_data->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->b_data->Textcolor = System::Drawing::Color::White;
-			this->b_data->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->b_data->Click += gcnew System::EventHandler(this, &FormMenu::b_data_Click);
-			// 
-			// label28
-			// 
-			this->label28->AutoSize = true;
-			this->label28->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label28->Location = System::Drawing::Point(43, 176);
-			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(58, 21);
-			this->label28->TabIndex = 64;
-			this->label28->Text = L"จังหวัด :";
-			// 
-			// label29
-			// 
-			this->label29->AutoSize = true;
-			this->label29->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label29->Location = System::Drawing::Point(340, 137);
-			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(79, 21);
-			this->label29->TabIndex = 63;
-			this->label29->Text = L"เขต/อำเภอ :";
-			// 
-			// label30
-			// 
-			this->label30->AutoSize = true;
-			this->label30->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label30->Location = System::Drawing::Point(16, 137);
-			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(85, 21);
-			this->label30->TabIndex = 62;
-			this->label30->Text = L"แขวง/ตำบล :";
-			// 
-			// label31
-			// 
-			this->label31->AutoSize = true;
-			this->label31->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label31->Location = System::Drawing::Point(58, 98);
-			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(43, 21);
-			this->label31->TabIndex = 61;
-			this->label31->Text = L"ที่อยู่ :";
-			// 
-			// label32
-			// 
-			this->label32->AutoSize = true;
-			this->label32->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label32->Location = System::Drawing::Point(324, 61);
-			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(95, 21);
-			this->label32->TabIndex = 60;
-			this->label32->Text = L"ชื่อ - นามสกุล :";
-			// 
-			// label33
-			// 
-			this->label33->AutoSize = true;
-			this->label33->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(222)));
-			this->label33->Location = System::Drawing::Point(13, 61);
-			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(88, 21);
-			this->label33->TabIndex = 59;
-			this->label33->Text = L"รหัสพนักงาน :";
 			// 
 			// panelsale
 			// 
@@ -1188,6 +859,7 @@ public:
 			this->qty->Name = L"qty";
 			this->qty->Size = System::Drawing::Size(209, 29);
 			this->qty->TabIndex = 74;
+			this->qty->ValueChanged += gcnew System::EventHandler(this, &FormMenu::qty_ValueChanged);
 			// 
 			// label5
 			// 
@@ -1757,6 +1429,397 @@ public:
 			this->label26->TabIndex = 46;
 			this->label26->Text = L"รหัสสินค้า :";
 			// 
+			// paneluser
+			// 
+			this->paneluser->BackColor = System::Drawing::Color::Gainsboro;
+			this->paneluser->Controls->Add(this->checkBox1);
+			this->paneluser->Controls->Add(this->label40);
+			this->paneluser->Controls->Add(this->label39);
+			this->paneluser->Controls->Add(this->label38);
+			this->paneluser->Controls->Add(this->label37);
+			this->paneluser->Controls->Add(this->label36);
+			this->paneluser->Controls->Add(this->label35);
+			this->paneluser->Controls->Add(this->label34);
+			this->paneluser->Controls->Add(this->note);
+			this->paneluser->Controls->Add(this->line);
+			this->paneluser->Controls->Add(this->fb);
+			this->paneluser->Controls->Add(this->email);
+			this->paneluser->Controls->Add(this->phone2);
+			this->paneluser->Controls->Add(this->phone1);
+			this->paneluser->Controls->Add(this->address5);
+			this->paneluser->Controls->Add(this->address4);
+			this->paneluser->Controls->Add(this->address3);
+			this->paneluser->Controls->Add(this->address2);
+			this->paneluser->Controls->Add(this->address1);
+			this->paneluser->Controls->Add(this->emp_name);
+			this->paneluser->Controls->Add(this->emp_id);
+			this->paneluser->Controls->Add(this->b_data);
+			this->paneluser->Controls->Add(this->label28);
+			this->paneluser->Controls->Add(this->label29);
+			this->paneluser->Controls->Add(this->label30);
+			this->paneluser->Controls->Add(this->label31);
+			this->paneluser->Controls->Add(this->label32);
+			this->paneluser->Controls->Add(this->label33);
+			this->paneluser->Dock = System::Windows::Forms::DockStyle::Fill;
+			this->paneluser->Location = System::Drawing::Point(223, 78);
+			this->paneluser->Name = L"paneluser";
+			this->paneluser->Size = System::Drawing::Size(677, 595);
+			this->paneluser->TabIndex = 35;
+			// 
+			// checkBox1
+			// 
+			this->checkBox1->AutoSize = true;
+			this->checkBox1->Font = (gcnew System::Drawing::Font(L"Cloud", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->checkBox1->Location = System::Drawing::Point(105, 22);
+			this->checkBox1->Name = L"checkBox1";
+			this->checkBox1->Size = System::Drawing::Size(92, 25);
+			this->checkBox1->TabIndex = 85;
+			this->checkBox1->Text = L"แก้ไขข้อมูล";
+			this->checkBox1->UseVisualStyleBackColor = true;
+			this->checkBox1->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkBox1_CheckedChanged);
+			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label40->Location = System::Drawing::Point(33, 297);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(68, 21);
+			this->label40->TabIndex = 84;
+			this->label40->Text = L"หมายเหตุ :";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label39->Location = System::Drawing::Point(371, 293);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(48, 21);
+			this->label39->TabIndex = 83;
+			this->label39->Text = L"Line :";
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label38->Location = System::Drawing::Point(333, 254);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(86, 21);
+			this->label38->TabIndex = 82;
+			this->label38->Text = L"Facebook :";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label37->Location = System::Drawing::Point(41, 256);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(60, 21);
+			this->label37->TabIndex = 81;
+			this->label37->Text = L"E-Mail :";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label36->Location = System::Drawing::Point(367, 215);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(52, 21);
+			this->label36->TabIndex = 80;
+			this->label36->Text = L"มือถือ :";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label35->Location = System::Drawing::Point(38, 215);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(63, 21);
+			this->label35->TabIndex = 79;
+			this->label35->Text = L"โทรศัพท์ :";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label34->Location = System::Drawing::Point(352, 176);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(67, 21);
+			this->label34->TabIndex = 78;
+			this->label34->Text = L"ไปรษณีย์ :";
+			// 
+			// note
+			// 
+			this->note->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->note->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->note->Location = System::Drawing::Point(105, 290);
+			this->note->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->note->Multiline = true;
+			this->note->Name = L"note";
+			this->note->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->note->Size = System::Drawing::Size(215, 181);
+			this->note->TabIndex = 77;
+			// 
+			// line
+			// 
+			this->line->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->line->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->line->Location = System::Drawing::Point(425, 290);
+			this->line->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->line->Name = L"line";
+			this->line->Size = System::Drawing::Size(215, 29);
+			this->line->TabIndex = 76;
+			// 
+			// fb
+			// 
+			this->fb->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->fb->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->fb->Location = System::Drawing::Point(425, 251);
+			this->fb->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->fb->Name = L"fb";
+			this->fb->Size = System::Drawing::Size(215, 29);
+			this->fb->TabIndex = 75;
+			// 
+			// email
+			// 
+			this->email->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->email->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->email->Location = System::Drawing::Point(105, 251);
+			this->email->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->email->Name = L"email";
+			this->email->Size = System::Drawing::Size(215, 29);
+			this->email->TabIndex = 74;
+			// 
+			// phone2
+			// 
+			this->phone2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->phone2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->phone2->Location = System::Drawing::Point(425, 212);
+			this->phone2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->phone2->Name = L"phone2";
+			this->phone2->Size = System::Drawing::Size(215, 29);
+			this->phone2->TabIndex = 73;
+			// 
+			// phone1
+			// 
+			this->phone1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->phone1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->phone1->Location = System::Drawing::Point(105, 212);
+			this->phone1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->phone1->Name = L"phone1";
+			this->phone1->Size = System::Drawing::Size(215, 29);
+			this->phone1->TabIndex = 72;
+			// 
+			// address5
+			// 
+			this->address5->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address5->Location = System::Drawing::Point(425, 173);
+			this->address5->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address5->Name = L"address5";
+			this->address5->Size = System::Drawing::Size(215, 29);
+			this->address5->TabIndex = 71;
+			// 
+			// address4
+			// 
+			this->address4->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address4->Location = System::Drawing::Point(105, 173);
+			this->address4->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address4->Name = L"address4";
+			this->address4->Size = System::Drawing::Size(215, 29);
+			this->address4->TabIndex = 70;
+			// 
+			// address3
+			// 
+			this->address3->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address3->Location = System::Drawing::Point(425, 134);
+			this->address3->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address3->Name = L"address3";
+			this->address3->Size = System::Drawing::Size(215, 29);
+			this->address3->TabIndex = 69;
+			// 
+			// address2
+			// 
+			this->address2->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address2->Location = System::Drawing::Point(105, 134);
+			this->address2->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address2->Name = L"address2";
+			this->address2->Size = System::Drawing::Size(215, 29);
+			this->address2->TabIndex = 68;
+			// 
+			// address1
+			// 
+			this->address1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->address1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->address1->Location = System::Drawing::Point(105, 95);
+			this->address1->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->address1->Name = L"address1";
+			this->address1->Size = System::Drawing::Size(535, 29);
+			this->address1->TabIndex = 67;
+			// 
+			// emp_name
+			// 
+			this->emp_name->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->emp_name->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->emp_name->Location = System::Drawing::Point(425, 58);
+			this->emp_name->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->emp_name->Name = L"emp_name";
+			this->emp_name->Size = System::Drawing::Size(215, 29);
+			this->emp_name->TabIndex = 66;
+			// 
+			// emp_id
+			// 
+			this->emp_id->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->emp_id->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->emp_id->Location = System::Drawing::Point(105, 58);
+			this->emp_id->Margin = System::Windows::Forms::Padding(4, 5, 4, 5);
+			this->emp_id->Name = L"emp_id";
+			this->emp_id->ReadOnly = true;
+			this->emp_id->Size = System::Drawing::Size(215, 29);
+			this->emp_id->TabIndex = 65;
+			this->emp_id->TextChanged += gcnew System::EventHandler(this, &FormMenu::emp_id_TextChanged);
+			// 
+			// b_data
+			// 
+			this->b_data->Activecolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(139)),
+				static_cast<System::Int32>(static_cast<System::Byte>(87)));
+			this->b_data->BackColor = System::Drawing::Color::SeaGreen;
+			this->b_data->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_data->BorderRadius = 0;
+			this->b_data->ButtonText = L"บันทึกข้อมูล";
+			this->b_data->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_data->DisabledColor = System::Drawing::Color::Gray;
+			this->b_data->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_data->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_data.Iconimage")));
+			this->b_data->Iconimage_right = nullptr;
+			this->b_data->Iconimage_right_Selected = nullptr;
+			this->b_data->Iconimage_Selected = nullptr;
+			this->b_data->IconMarginLeft = 0;
+			this->b_data->IconMarginRight = 0;
+			this->b_data->IconRightVisible = true;
+			this->b_data->IconRightZoom = 0;
+			this->b_data->IconVisible = true;
+			this->b_data->IconZoom = 90;
+			this->b_data->IsTab = false;
+			this->b_data->Location = System::Drawing::Point(370, 341);
+			this->b_data->Name = L"b_data";
+			this->b_data->Normalcolor = System::Drawing::Color::SeaGreen;
+			this->b_data->OnHovercolor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->b_data->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_data->selected = false;
+			this->b_data->Size = System::Drawing::Size(270, 130);
+			this->b_data->TabIndex = 65;
+			this->b_data->Text = L"บันทึกข้อมูล";
+			this->b_data->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_data->Textcolor = System::Drawing::Color::White;
+			this->b_data->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_data->Click += gcnew System::EventHandler(this, &FormMenu::b_data_Click);
+			// 
+			// label28
+			// 
+			this->label28->AutoSize = true;
+			this->label28->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label28->Location = System::Drawing::Point(43, 176);
+			this->label28->Name = L"label28";
+			this->label28->Size = System::Drawing::Size(58, 21);
+			this->label28->TabIndex = 64;
+			this->label28->Text = L"จังหวัด :";
+			// 
+			// label29
+			// 
+			this->label29->AutoSize = true;
+			this->label29->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label29->Location = System::Drawing::Point(340, 137);
+			this->label29->Name = L"label29";
+			this->label29->Size = System::Drawing::Size(79, 21);
+			this->label29->TabIndex = 63;
+			this->label29->Text = L"เขต/อำเภอ :";
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label30->Location = System::Drawing::Point(16, 137);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(85, 21);
+			this->label30->TabIndex = 62;
+			this->label30->Text = L"แขวง/ตำบล :";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label31->Location = System::Drawing::Point(58, 98);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(43, 21);
+			this->label31->TabIndex = 61;
+			this->label31->Text = L"ที่อยู่ :";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label32->Location = System::Drawing::Point(324, 61);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(95, 21);
+			this->label32->TabIndex = 60;
+			this->label32->Text = L"ชื่อ - นามสกุล :";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Font = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->label33->Location = System::Drawing::Point(13, 61);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(88, 21);
+			this->label33->TabIndex = 59;
+			this->label33->Text = L"รหัสพนักงาน :";
+			// 
 			// panelHeader
 			// 
 			this->panelHeader->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(53)),
@@ -2117,6 +2180,8 @@ public:
 			// 
 			this->panelloginright->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(31)), static_cast<System::Int32>(static_cast<System::Byte>(43)),
 				static_cast<System::Int32>(static_cast<System::Byte>(55)));
+			this->panelloginright->Controls->Add(this->panelsetting);
+			this->panelloginright->Controls->Add(this->b_setting);
 			this->panelloginright->Controls->Add(this->pictureBox5);
 			this->panelloginright->Controls->Add(this->pictureBox4);
 			this->panelloginright->Controls->Add(this->password);
@@ -2126,6 +2191,359 @@ public:
 			this->panelloginright->Name = L"panelloginright";
 			this->panelloginright->Size = System::Drawing::Size(900, 595);
 			this->panelloginright->TabIndex = 94;
+			// 
+			// panelsetting
+			// 
+			this->panelsetting->BackColor = System::Drawing::Color::Gainsboro;
+			this->panelsetting->Controls->Add(this->panel1);
+			this->panelsetting->Controls->Add(this->checkCn);
+			this->panelsetting->Controls->Add(this->b_test);
+			this->panelsetting->Controls->Add(this->b_saveset);
+			this->panelsetting->Controls->Add(this->label45);
+			this->panelsetting->Controls->Add(this->label44);
+			this->panelsetting->Controls->Add(this->label43);
+			this->panelsetting->Controls->Add(this->label42);
+			this->panelsetting->Controls->Add(this->label41);
+			this->panelsetting->Controls->Add(this->cns);
+			this->panelsetting->Controls->Add(this->pas);
+			this->panelsetting->Controls->Add(this->use);
+			this->panelsetting->Controls->Add(this->dtbase);
+			this->panelsetting->Controls->Add(this->dtsource);
+			this->panelsetting->Controls->Add(this->checkString);
+			this->panelsetting->Controls->Add(this->checkOffline);
+			this->panelsetting->Controls->Add(this->checkOnline);
+			this->panelsetting->Location = System::Drawing::Point(51, 46);
+			this->panelsetting->Name = L"panelsetting";
+			this->panelsetting->Size = System::Drawing::Size(797, 501);
+			this->panelsetting->TabIndex = 35;
+			// 
+			// panel1
+			// 
+			this->panel1->BackColor = System::Drawing::Color::White;
+			this->panel1->Controls->Add(this->label47);
+			this->panel1->Controls->Add(this->linkLabel1);
+			this->panel1->Controls->Add(this->label46);
+			this->panel1->Location = System::Drawing::Point(371, 313);
+			this->panel1->Name = L"panel1";
+			this->panel1->Size = System::Drawing::Size(386, 131);
+			this->panel1->TabIndex = 39;
+			// 
+			// label47
+			// 
+			this->label47->AutoSize = true;
+			this->label47->Font = (gcnew System::Drawing::Font(L"Cloud", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label47->Location = System::Drawing::Point(3, 5);
+			this->label47->Name = L"label47";
+			this->label47->Size = System::Drawing::Size(58, 21);
+			this->label47->TabIndex = 40;
+			this->label47->Text = L"Note !!";
+			// 
+			// linkLabel1
+			// 
+			this->linkLabel1->AutoSize = true;
+			this->linkLabel1->Font = (gcnew System::Drawing::Font(L"Cloud Light", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(222)));
+			this->linkLabel1->Location = System::Drawing::Point(202, 106);
+			this->linkLabel1->Name = L"linkLabel1";
+			this->linkLabel1->Size = System::Drawing::Size(42, 20);
+			this->linkLabel1->TabIndex = 1;
+			this->linkLabel1->TabStop = true;
+			this->linkLabel1->Text = L"View";
+			this->linkLabel1->VisitedLinkColor = System::Drawing::Color::Blue;
+			this->linkLabel1->LinkClicked += gcnew System::Windows::Forms::LinkLabelLinkClickedEventHandler(this, &FormMenu::linkLabel1_LinkClicked);
+			// 
+			// label46
+			// 
+			this->label46->AutoSize = true;
+			this->label46->Font = (gcnew System::Drawing::Font(L"Cloud Light", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label46->Location = System::Drawing::Point(3, 26);
+			this->label46->Name = L"label46";
+			this->label46->Size = System::Drawing::Size(382, 100);
+			this->label46->TabIndex = 0;
+			this->label46->Text = resources->GetString(L"label46.Text");
+			// 
+			// checkCn
+			// 
+			this->checkCn->AutoSize = true;
+			this->checkCn->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkCn->ForeColor = System::Drawing::Color::Black;
+			this->checkCn->Location = System::Drawing::Point(158, 270);
+			this->checkCn->Name = L"checkCn";
+			this->checkCn->Size = System::Drawing::Size(334, 23);
+			this->checkCn->TabIndex = 38;
+			this->checkCn->Text = L"Create new database (Table will make)";
+			this->checkCn->UseVisualStyleBackColor = true;
+			this->checkCn->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkCn_CheckedChanged);
+			// 
+			// b_test
+			// 
+			this->b_test->Activecolor = System::Drawing::Color::DarkBlue;
+			this->b_test->BackColor = System::Drawing::Color::MediumBlue;
+			this->b_test->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_test->BorderRadius = 0;
+			this->b_test->ButtonText = L"Test Connection";
+			this->b_test->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_test->DisabledColor = System::Drawing::Color::Gray;
+			this->b_test->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_test->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_test.Iconimage")));
+			this->b_test->Iconimage_right = nullptr;
+			this->b_test->Iconimage_right_Selected = nullptr;
+			this->b_test->Iconimage_Selected = nullptr;
+			this->b_test->IconMarginLeft = 0;
+			this->b_test->IconMarginRight = 0;
+			this->b_test->IconRightVisible = true;
+			this->b_test->IconRightZoom = 0;
+			this->b_test->IconVisible = true;
+			this->b_test->IconZoom = 90;
+			this->b_test->IsTab = false;
+			this->b_test->Location = System::Drawing::Point(83, 313);
+			this->b_test->Name = L"b_test";
+			this->b_test->Normalcolor = System::Drawing::Color::MediumBlue;
+			this->b_test->OnHovercolor = System::Drawing::Color::DarkBlue;
+			this->b_test->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_test->selected = false;
+			this->b_test->Size = System::Drawing::Size(235, 63);
+			this->b_test->TabIndex = 37;
+			this->b_test->Text = L"Test Connection";
+			this->b_test->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_test->Textcolor = System::Drawing::Color::White;
+			this->b_test->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_test->Click += gcnew System::EventHandler(this, &FormMenu::b_test_Click);
+			// 
+			// b_saveset
+			// 
+			this->b_saveset->Activecolor = System::Drawing::Color::DarkGreen;
+			this->b_saveset->BackColor = System::Drawing::Color::Green;
+			this->b_saveset->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_saveset->BorderRadius = 0;
+			this->b_saveset->ButtonText = L"      SAVE";
+			this->b_saveset->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_saveset->DisabledColor = System::Drawing::Color::Gray;
+			this->b_saveset->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_saveset->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_saveset.Iconimage")));
+			this->b_saveset->Iconimage_right = nullptr;
+			this->b_saveset->Iconimage_right_Selected = nullptr;
+			this->b_saveset->Iconimage_Selected = nullptr;
+			this->b_saveset->IconMarginLeft = 0;
+			this->b_saveset->IconMarginRight = 0;
+			this->b_saveset->IconRightVisible = true;
+			this->b_saveset->IconRightZoom = 0;
+			this->b_saveset->IconVisible = true;
+			this->b_saveset->IconZoom = 90;
+			this->b_saveset->IsTab = false;
+			this->b_saveset->Location = System::Drawing::Point(83, 382);
+			this->b_saveset->Name = L"b_saveset";
+			this->b_saveset->Normalcolor = System::Drawing::Color::Green;
+			this->b_saveset->OnHovercolor = System::Drawing::Color::DarkGreen;
+			this->b_saveset->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_saveset->selected = false;
+			this->b_saveset->Size = System::Drawing::Size(235, 63);
+			this->b_saveset->TabIndex = 36;
+			this->b_saveset->Text = L"      SAVE";
+			this->b_saveset->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_saveset->Textcolor = System::Drawing::Color::White;
+			this->b_saveset->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_saveset->Click += gcnew System::EventHandler(this, &FormMenu::b_saveset_Click);
+			// 
+			// label45
+			// 
+			this->label45->AutoSize = true;
+			this->label45->BackColor = System::Drawing::Color::Transparent;
+			this->label45->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label45->ForeColor = System::Drawing::Color::Black;
+			this->label45->Location = System::Drawing::Point(413, 81);
+			this->label45->Name = L"label45";
+			this->label45->Size = System::Drawing::Size(159, 19);
+			this->label45->TabIndex = 12;
+			this->label45->Text = L"Connection Strings :";
+			// 
+			// label44
+			// 
+			this->label44->AutoSize = true;
+			this->label44->BackColor = System::Drawing::Color::Transparent;
+			this->label44->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label44->ForeColor = System::Drawing::Color::Black;
+			this->label44->Location = System::Drawing::Point(54, 229);
+			this->label44->Name = L"label44";
+			this->label44->Size = System::Drawing::Size(88, 19);
+			this->label44->TabIndex = 11;
+			this->label44->Text = L"Password :";
+			// 
+			// label43
+			// 
+			this->label43->AutoSize = true;
+			this->label43->BackColor = System::Drawing::Color::Transparent;
+			this->label43->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label43->ForeColor = System::Drawing::Color::Black;
+			this->label43->Location = System::Drawing::Point(47, 179);
+			this->label43->Name = L"label43";
+			this->label43->Size = System::Drawing::Size(95, 19);
+			this->label43->TabIndex = 10;
+			this->label43->Text = L"Username :";
+			// 
+			// label42
+			// 
+			this->label42->AutoSize = true;
+			this->label42->BackColor = System::Drawing::Color::Transparent;
+			this->label42->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label42->ForeColor = System::Drawing::Color::Black;
+			this->label42->Location = System::Drawing::Point(50, 131);
+			this->label42->Name = L"label42";
+			this->label42->Size = System::Drawing::Size(92, 19);
+			this->label42->TabIndex = 9;
+			this->label42->Text = L"Database :";
+			// 
+			// label41
+			// 
+			this->label41->AutoSize = true;
+			this->label41->BackColor = System::Drawing::Color::Transparent;
+			this->label41->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label41->ForeColor = System::Drawing::Color::Black;
+			this->label41->Location = System::Drawing::Point(31, 80);
+			this->label41->Name = L"label41";
+			this->label41->Size = System::Drawing::Size(111, 19);
+			this->label41->TabIndex = 8;
+			this->label41->Text = L"Data Source :";
+			// 
+			// cns
+			// 
+			this->cns->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->cns->Location = System::Drawing::Point(404, 108);
+			this->cns->Multiline = true;
+			this->cns->Name = L"cns";
+			this->cns->ReadOnly = true;
+			this->cns->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
+			this->cns->Size = System::Drawing::Size(353, 144);
+			this->cns->TabIndex = 7;
+			// 
+			// pas
+			// 
+			this->pas->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->pas->Location = System::Drawing::Point(158, 225);
+			this->pas->Name = L"pas";
+			this->pas->ReadOnly = true;
+			this->pas->Size = System::Drawing::Size(238, 27);
+			this->pas->TabIndex = 6;
+			// 
+			// use
+			// 
+			this->use->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->use->Location = System::Drawing::Point(158, 175);
+			this->use->Name = L"use";
+			this->use->ReadOnly = true;
+			this->use->Size = System::Drawing::Size(238, 27);
+			this->use->TabIndex = 5;
+			// 
+			// dtbase
+			// 
+			this->dtbase->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dtbase->Location = System::Drawing::Point(158, 126);
+			this->dtbase->Name = L"dtbase";
+			this->dtbase->ReadOnly = true;
+			this->dtbase->Size = System::Drawing::Size(238, 27);
+			this->dtbase->TabIndex = 4;
+			// 
+			// dtsource
+			// 
+			this->dtsource->Font = (gcnew System::Drawing::Font(L"Century Gothic", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dtsource->Location = System::Drawing::Point(158, 77);
+			this->dtsource->Name = L"dtsource";
+			this->dtsource->ReadOnly = true;
+			this->dtsource->Size = System::Drawing::Size(238, 27);
+			this->dtsource->TabIndex = 3;
+			// 
+			// checkString
+			// 
+			this->checkString->AutoSize = true;
+			this->checkString->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkString->ForeColor = System::Drawing::Color::DarkCyan;
+			this->checkString->Location = System::Drawing::Point(452, 36);
+			this->checkString->Name = L"checkString";
+			this->checkString->Size = System::Drawing::Size(200, 27);
+			this->checkString->TabIndex = 2;
+			this->checkString->Text = L"Connection Strings";
+			this->checkString->UseVisualStyleBackColor = true;
+			this->checkString->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkString_CheckedChanged);
+			// 
+			// checkOffline
+			// 
+			this->checkOffline->AutoSize = true;
+			this->checkOffline->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkOffline->ForeColor = System::Drawing::Color::Red;
+			this->checkOffline->Location = System::Drawing::Point(305, 37);
+			this->checkOffline->Name = L"checkOffline";
+			this->checkOffline->Size = System::Drawing::Size(88, 27);
+			this->checkOffline->TabIndex = 1;
+			this->checkOffline->Text = L"Offline";
+			this->checkOffline->UseVisualStyleBackColor = true;
+			this->checkOffline->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkOffline_CheckedChanged);
+			// 
+			// checkOnline
+			// 
+			this->checkOnline->AutoSize = true;
+			this->checkOnline->Font = (gcnew System::Drawing::Font(L"Century Gothic", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->checkOnline->ForeColor = System::Drawing::Color::Green;
+			this->checkOnline->Location = System::Drawing::Point(146, 37);
+			this->checkOnline->Name = L"checkOnline";
+			this->checkOnline->Size = System::Drawing::Size(89, 27);
+			this->checkOnline->TabIndex = 0;
+			this->checkOnline->Text = L"Online";
+			this->checkOnline->UseVisualStyleBackColor = true;
+			this->checkOnline->CheckedChanged += gcnew System::EventHandler(this, &FormMenu::checkOnline_CheckedChanged);
+			// 
+			// b_setting
+			// 
+			this->b_setting->Activecolor = System::Drawing::Color::DarkRed;
+			this->b_setting->BackColor = System::Drawing::Color::Red;
+			this->b_setting->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->b_setting->BorderRadius = 0;
+			this->b_setting->ButtonText = L"Connection Setting";
+			this->b_setting->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->b_setting->DisabledColor = System::Drawing::Color::Gray;
+			this->b_setting->Iconcolor = System::Drawing::Color::Transparent;
+			this->b_setting->Iconimage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"b_setting.Iconimage")));
+			this->b_setting->Iconimage_right = nullptr;
+			this->b_setting->Iconimage_right_Selected = nullptr;
+			this->b_setting->Iconimage_Selected = nullptr;
+			this->b_setting->IconMarginLeft = 0;
+			this->b_setting->IconMarginRight = 0;
+			this->b_setting->IconRightVisible = true;
+			this->b_setting->IconRightZoom = 0;
+			this->b_setting->IconVisible = true;
+			this->b_setting->IconZoom = 90;
+			this->b_setting->IsTab = false;
+			this->b_setting->Location = System::Drawing::Point(0, 0);
+			this->b_setting->Name = L"b_setting";
+			this->b_setting->Normalcolor = System::Drawing::Color::Red;
+			this->b_setting->OnHovercolor = System::Drawing::Color::DarkRed;
+			this->b_setting->OnHoverTextColor = System::Drawing::Color::White;
+			this->b_setting->selected = false;
+			this->b_setting->Size = System::Drawing::Size(224, 47);
+			this->b_setting->TabIndex = 33;
+			this->b_setting->Text = L"Connection Setting";
+			this->b_setting->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->b_setting->Textcolor = System::Drawing::Color::White;
+			this->b_setting->TextFont = (gcnew System::Drawing::Font(L"Cloud Light", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->b_setting->Click += gcnew System::EventHandler(this, &FormMenu::b_setting_Click);
 			// 
 			// pictureBox5
 			// 
@@ -2280,8 +2698,6 @@ public:
 			this->Text = L"KitCash";
 			this->Load += gcnew System::EventHandler(this, &FormMenu::FormMenu_Load);
 			this->panelmain->ResumeLayout(false);
-			this->paneluser->ResumeLayout(false);
-			this->paneluser->PerformLayout();
 			this->panelsale->ResumeLayout(false);
 			this->panelsale->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV))->EndInit();
@@ -2291,6 +2707,8 @@ public:
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGVadd))->EndInit();
 			this->paneledit->ResumeLayout(false);
 			this->paneledit->PerformLayout();
+			this->paneluser->ResumeLayout(false);
+			this->paneluser->PerformLayout();
 			this->panelHeader->ResumeLayout(false);
 			this->panelHeader->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
@@ -2299,6 +2717,10 @@ public:
 			this->panelLogo->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panelloginright->ResumeLayout(false);
+			this->panelsetting->ResumeLayout(false);
+			this->panelsetting->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			this->panel4->ResumeLayout(false);
@@ -2308,6 +2730,32 @@ public:
 
 		}
 #pragma endregion
+private: SqlDataReader ^ connect(String^ cmds)
+{
+	try
+	{
+		String^ strcon = Connection2::strcon;
+
+		SqlConnection^ con = gcnew SqlConnection(strcon);
+
+		con->Open();
+
+		String^ cmdq = cmds;
+
+		SqlCommand^ cmd = gcnew SqlCommand(cmdq, con);
+
+		SqlDataReader^ reader = cmd->ExecuteReader();
+
+		return reader;
+
+		con->Close();
+	}
+	catch (Exception^ ex)
+	{
+		MessageBox::Show(ex->Message);
+	}
+}
+
 //Code for FormEdit
 //Code for FormEdit
 //Code for FormEdit
@@ -2315,16 +2763,8 @@ private: System::Void pro_idedit_TextChanged(System::Object^  sender, System::Ev
 {
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_inventory where Product_ID='" + pro_idedit->Text + "'", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
-
+		SqlDataReader^ reader = connect("select * from tbl_inventory where Product_ID='" + pro_idedit->Text + "'");
+		
 		if (reader->Read())
 		{
 			pro_nameedit->Text = reader["Product_Name"]->ToString();
@@ -2343,8 +2783,6 @@ private: System::Void pro_idedit_TextChanged(System::Object^  sender, System::Ev
 			pro_typeedit->Text = "";
 			pro_unitedit->Text = "";
 		}
-
-		con->Close();
 	}
 	catch (Exception^ ex)
 	{
@@ -2497,15 +2935,7 @@ private: System::Void pro_id_TextChanged(System::Object^  sender, System::EventA
 {
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_inventory where Product_ID='" + pro_id->Text + "'", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
+		SqlDataReader^ reader = connect("select * from tbl_inventory where Product_ID='" + pro_id->Text + "'");
 
 		if (reader->Read())
 		{
@@ -2523,12 +2953,44 @@ private: System::Void pro_id_TextChanged(System::Object^  sender, System::EventA
 			pro_type->Text = "";
 			pro_unit->Text = "";
 		}
-
-		con->Close();
 	}
 	catch (Exception^ ex)
 	{
 		MessageBox::Show(ex->Message);
+	}
+}
+private: System::Void qty_ValueChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (pro_name->TextLength > 0)
+	{
+		try
+		{
+			SqlDataReader^ reader = connect("select * from tbl_inventory where Product_ID='" + pro_id->Text + "'");
+
+			if (reader->Read())
+			{
+
+				String^ qtyc = reader["Product_QTY"]->ToString();
+				double qtycheck = Convert::ToDouble(qtyc);
+				if (Convert::ToDouble(qty->Value) > qtycheck)
+				{
+					String^ text1 = "ในคลังสินค้ามี " + pro_name->Text;
+					String^ text2 = " จำนวน " + reader["Product_QTY"]->ToString();
+					String^ text3 = " " + pro_unit->Text;
+					String^ text4 = text1 + text2 + text3;
+					MessageBox::Show(text4, "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+					qty->Value = Convert::ToInt32(qtycheck);
+				}
+			}
+			else
+			{
+				qty->Value = 0;
+			}
+		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}
 	}
 }
 private: System::Void b_add_Click(System::Object^  sender, System::EventArgs^  e)
@@ -2581,6 +3043,7 @@ private: System::Void rubmoney_TextChanged(System::Object^  sender, System::Even
 	}
 	catch (Exception^ ex)
 	{
+		//MessageBox::Show(ex->Message);
 	}
 }
 private: System::Void rubnumber(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e)
@@ -2594,15 +3057,7 @@ private: void Trid()
 {
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("select count(TR_Id) as autonumber from Tbl_Sale", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
+		SqlDataReader^ reader = connect("select count(TR_Id) as autonumber from Tbl_Sale");
 
 		if (reader->Read())
 		{
@@ -2613,8 +3068,6 @@ private: void Trid()
 		{
 			tr_id->Text = "";
 		}
-
-		con->Close();
 	}
 	catch (Exception^ ex)
 	{
@@ -2641,8 +3094,11 @@ private: System::Void b_savesale_Click(System::Object^  sender, System::EventArg
 			String^ prototal = DGV->Rows[i]->Cells[5]->Value->ToString();
 			Connection2::executesql("INSERT INTO Tbl_SaleDetail ([TR_Id] ,[Pro_Id] ,[Pro_Name] ,[Pro_Price] ,[Pro_Qty] ,[Pro_Unit] ,[Pro_Total]) VALUES ('" + tr_id->Text + "', '" + proid + "', '" + proname + "', '" + proprice + "', '" + proqty + "', '" + prounit + "', '" + prototal + "')");
 			//cut stock tbl inventory
-			Connection2::executesql("UPDATE Tbl_Inventory SET Product_QTY = '" + proqty + "' WHERE Product_ID = '" + proid + "'");
-
+			Connection2::executesql("UPDATE Tbl_Inventory SET Product_QTY = Product_QTY-'" + proqty + "' WHERE Product_ID = '" + proid + "'");
+			/*if ((e->KeyChar < 48 || e->KeyChar > 57) && (e->KeyChar != 8))
+			{
+				e->Handled = true;
+			}*/
 		}
 		DGV->Rows->Clear();
 		rubmoney->Clear();
@@ -2662,33 +3118,16 @@ private: System::Void b_savesale_Click(System::Object^  sender, System::EventArg
 //Code for Main
 private: bool dragging;
 private: Point offset;
-private: void checkprocess()
-{
-	array<Process^>^localByName = Process::GetProcessesByName("Reporting");
-	if (localByName->Length == 0)
-	{
-		Form::Text = L"KitCash";
-	}
-}
 private: System::Void FormMenu_Load(System::Object^  sender, System::EventArgs^  e)
 {
-	Connection2::connnectsql();
 	this->dragging = false;
-	//Form::Text = L"KitCash - Menu";
 	stateuser->Text = "";
-	Trid();
 	panelloginright->Visible = true;
 	panelsale->Visible = true;
 	paneladd->Visible = false;
 	paneledit->Visible = false;
 	paneluser->Visible = false;
-	loadinventory();
-	checkprocess();
-
-	String^ path = System::IO::Directory::GetCurrentDirectory();
-	Connection2::executesql("INSERT INTO Path (path) VALUES ('" + path + "')");
-	Connection2::executesql("UPDATE Path SET path = REPLACE(path, '\\', '/')");
-
+	panelsetting->Visible = false;
 }
 private: System::Void panelHeader_MouseDown(System::Object^  sender, System::Windows::Forms::MouseEventArgs^  e)
 {
@@ -2761,35 +3200,25 @@ private: System::Void b_itemedit_Click(System::Object^  sender, System::EventArg
 //code for report
 //code for report
 //code for report
+String^ path;
 private: System::Void b_itemreport_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-	DataTable^ checkpath = Connection2::executesql("SELECT * FROM Path");
-	int check = checkpath->Rows->Count;
-	String^ check2 = Convert::ToString(check);
+//	DataTable^ checkpath = Connection2::executesql("SELECT path FROM Path");
+//	int check = checkpath->Rows->Count;
+//	String^ check2 = Convert::ToString(check);
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
+		SqlDataReader^ reader = connect("SELECT Emp_Id FROM Tbl_Employee WHERE Emp_Name = '" + emp->Text + "'");
 
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmdemp = gcnew SqlCommand("SELECT Emp_Id FROM Tbl_Employee WHERE Emp_Name = '" + emp->Text + "'", con);
-
-		SqlDataReader^ reademp = cmdemp->ExecuteReader();
-
-		if (reademp->Read())
+		if (reader->Read())
 		{
-			String^ id = reademp["Emp_Id"]->ToString();
+			String^ id = reader["Emp_Id"]->ToString();
 			Form::Text = L"KitCash - " + id;
 		}
 		else
 		{
 			Form::Text = L"KitCash";
 		}
-
-		con->Close();
-
 	}
 	catch (Exception^ ex)
 	{
@@ -2797,36 +3226,36 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 	}
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("SELECT path FROM Path WHERE ID = '" + check2 + "'", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
-
-		if (reader->Read())
-		{
-			String^ path = reader["path"]->ToString();
-			Process::Start(path + "/Reporting.exe");
-			Thread::Sleep(2000);
-			Form::Text = L"KitCash";
-		}
-		else
-		{
-			String^ path = "";
-		}
-
-		con->Close();
-
+		path = Directory::GetCurrentDirectory();
+		path = path->Replace('\\', '/');
+		Process::Start(path + "/Reporting.exe");
+		Thread::Sleep(2000);
+		Form::Text = L"KitCash";
 	}
-	catch (Exception^ ex)
+	catch (Exception^ e)
 	{
-		MessageBox::Show(ex->Message);
+		MessageBox::Show(e->Message);
 	}
+	//try
+	//{
+	//	SqlDataReader^ reader = connect("SELECT path FROM Path WHERE ID = '" + check2 + "'");
 
+	//	if (reader->Read())
+	//	{
+	//		String^ path = reader["path"]->ToString();
+	//		Process::Start(path + "/Reporting.exe");
+	//		//Thread::Sleep(2000);
+	//		Form::Text = L"KitCash";
+	//	}
+	//	else
+	//	{
+	//		String^ path = "";
+	//	}
+	//}
+	//catch (Exception^ ex)
+	//{
+	//	MessageBox::Show(ex->Message);
+	//}
 }
 
 
@@ -2836,6 +3265,39 @@ private: System::Void b_itemreport_Click(System::Object^  sender, System::EventA
 
 private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^  e)
 {
+	try
+	{
+		SqlConnection^ con = gcnew SqlConnection(Connection2::connnectsql("", "", "", "", "", "", 3));
+		con->Open();
+		con->Close();
+	}
+	catch (Exception^ ex)
+	{
+		if (MessageBox::Show("กรุณาตั้งค่าเชื่อมต่อก่อน", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning) == ::DialogResult::OK)
+			return;
+	}
+	//------------------------------------------------------------------------------------
+	Trid();
+	loadinventory();
+	path = Directory::GetCurrentDirectory();
+	path = path->Replace('\\', '/');
+	if (File::Exists(path+"/cns.txt"))
+	{
+		StreamWriter^ txt = File::CreateText(path + "/cns.txt");
+		try
+		{
+			txt->WriteLine(Connection2::connnectsql("", "", "", "", "", "", 3));
+		}
+		finally
+		{
+			if (txt)
+			delete (IDisposable^)txt;
+		}
+	}
+	//String^ path = System::IO::Directory::GetCurrentDirectory();
+	//Connection2::executesql("INSERT INTO Path (path) VALUES ('" + path + "')");
+	//Connection2::executesql("UPDATE Path SET path = REPLACE(path, '\\', '/')");
+	//------------------------------------------------------------------------------------
 	DataTable^ checkloginemp = Connection2::executesql("SELECT * FROM Tbl_Employee Where Emp_Id = '" + username->Text + "' and Emp_Password = '" + password->Text + "'");
 	if (checkloginemp->Rows->Count > 0)
 	{
@@ -2844,20 +3306,12 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 		labelheader->Text = "ITEM_SALE";
 		try
 		{
-			String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
+			SqlDataReader^ reader = connect("select * from tbl_employee where Emp_Id='" + username->Text + "'");
 
-			SqlConnection^ con = gcnew SqlConnection(strcon);
-
-			con->Open();
-
-			SqlCommand^ cmdemp = gcnew SqlCommand("select * from tbl_employee where Emp_Id='" + username->Text + "'", con);
-
-			SqlDataReader^ readeremp = cmdemp->ExecuteReader();
-
-			if (readeremp->Read())
+			if (reader->Read())
 			{
-				stateuser->Text = readeremp["Emp_Name"]->ToString();
-				emp->Text = readeremp["Emp_Name"]->ToString();
+				stateuser->Text = reader["Emp_Name"]->ToString();
+				emp->Text = reader["Emp_Name"]->ToString();
 				String^ admin = "เจ้าของร้าน";
 				if (stateuser->Text != "เจ้าของร้าน")
 				{
@@ -2868,9 +3322,6 @@ private: System::Void b_login_Click(System::Object^  sender, System::EventArgs^ 
 			{
 				stateuser->Text = "";
 			}
-
-			con->Close();
-
 		}
 		catch (Exception^ ex)
 		{
@@ -2939,15 +3390,7 @@ private: void Empid()
 {
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("select count(Emp_Id) as autonumber from Tbl_Employee", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
+		SqlDataReader^ reader = connect("select count(Emp_Id) as autonumber from Tbl_Employee");
 
 		if (reader->Read())
 		{
@@ -2958,8 +3401,6 @@ private: void Empid()
 		{
 			emp_id->Text = "";
 		}
-
-		con->Close();
 	}
 	catch (Exception^ ex)
 	{
@@ -2968,87 +3409,77 @@ private: void Empid()
 }
 private: System::Void b_data_Click(System::Object^  sender, System::EventArgs^  e) 
 {
-		if (checkBox1->Checked == false)
+	if (checkBox1->Checked == false)
+	{
+		if (MessageBox::Show("คุณต้องการบันทึกข้อมูลหรือไม่", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
 		{
+			MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			Connection2::executesql("insert into Tbl_Employee(Emp_Id, Emp_Name, Permission, Address1, Address2, Address3, Address4, Address5, Phone1, Phone2, Email, FB, Line, Note) values('" + emp_id->Text + "', '" + emp_name->Text + "', '" + "พนักงานขาย" + "', '" + address1->Text + "', '" + address2->Text + "', '" + address3->Text + "', '" + address4->Text + "', '" + address5->Text + "', '" + phone1->Text + "', '" + phone2->Text + "', '" + email->Text + "', '" + fb->Text + "', '" + line->Text + "', '" + note->Text + "')");
+			emp_name->Text = "";
+			address1->Text = "";
+			address2->Text = "";
+			address3->Text = "";
+			address4->Text = "";
+			address5->Text = "";
+			phone1->Text = "";
+			phone2->Text = "";
+			email->Text = "";
+			fb->Text = "";
+			line->Text = "";
+			note->Text = "";
+			Empid();
+		}
+	}
+	else
+	{
+		try
+		{
+			SqlDataReader^ reader = connect("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'");
+
 			if (MessageBox::Show("คุณต้องการบันทึกข้อมูลหรือไม่", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
 			{
-				MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
-				Connection2::executesql("insert into Tbl_Employee(Emp_Id, Emp_Name, Permission, Address1, Address2, Address3, Address4, Address5, Phone1, Phone2, Email, FB, Line, Note) values('" + emp_id->Text + "', '" + emp_name->Text + "', '" + "พนักงานขาย" + "', '" + address1->Text + "', '" + address2->Text + "', '" + address3->Text + "', '" + address4->Text + "', '" + address5->Text + "', '" + phone1->Text + "', '" + phone2->Text + "', '" + email->Text + "', '" + fb->Text + "', '" + line->Text + "', '" + note->Text + "')");
-				emp_name->Text = "";
-				address1->Text = "";
-				address2->Text = "";
-				address3->Text = "";
-				address4->Text = "";
-				address5->Text = "";
-				phone1->Text = "";
-				phone2->Text = "";
-				email->Text = "";
-				fb->Text = "";
-				line->Text = "";
-				note->Text = "";
-				Empid();
-			}
-		}
-		else
-		{
-			try
-			{
-				String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-				SqlConnection^ con = gcnew SqlConnection(strcon);
-
-				con->Open();
-
-				SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'", con);
-
-				SqlDataReader^ reader = cmd->ExecuteReader();
-
-				if (MessageBox::Show("คุณต้องการบันทึกข้อมูลหรือไม่", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
+				if (reader->Read())
 				{
-					if (reader->Read())
-					{
-						MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
-						Connection2::executesql("UPDATE Tbl_Employee SET Emp_Name = '" + emp_name->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Address1 = '" + address1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Address2 = '" + address2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Address3 = '" + address3->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Address4 = '" + address4->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Address5 = '" + address5->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Phone1 = '" + phone1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Phone2 = '" + phone2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Email = '" + email->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET FB = '" + fb->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Line = '" + line->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-						Connection2::executesql("UPDATE Tbl_Employee SET Note = '" + note->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
-					}
-					else
-					{
-						MessageBox::Show("ไม่พบรหัสพนักงงานในระบบ", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Stop);
-						emp_id->Text = "";
-						emp_name->Text = "";
-						address1->Text = "";
-						address2->Text = "";
-						address3->Text = "";
-						address4->Text = "";
-						address5->Text = "";
-						phone1->Text = "";
-						phone2->Text = "";
-						email->Text = "";
-						fb->Text = "";
-						line->Text = "";
-						note->Text = "";
-						return;
-					}
+					MessageBox::Show("บันทึกข้อมูลการขายเรียบร้อย", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+					Connection2::executesql("UPDATE Tbl_Employee SET Emp_Name = '" + emp_name->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Address1 = '" + address1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Address2 = '" + address2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Address3 = '" + address3->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Address4 = '" + address4->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Address5 = '" + address5->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Phone1 = '" + phone1->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Phone2 = '" + phone2->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Email = '" + email->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET FB = '" + fb->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Line = '" + line->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
+					Connection2::executesql("UPDATE Tbl_Employee SET Note = '" + note->Text + "' WHERE Emp_Id = '" + emp_id->Text + "'");
 				}
-				con->Close();
+				else
+				{
+					MessageBox::Show("ไม่พบรหัสพนักงงานในระบบ", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Stop);
+					emp_id->Text = "";
+					emp_name->Text = "";
+					address1->Text = "";
+					address2->Text = "";
+					address3->Text = "";
+					address4->Text = "";
+					address5->Text = "";
+					phone1->Text = "";
+					phone2->Text = "";
+					email->Text = "";
+					fb->Text = "";
+					line->Text = "";
+					note->Text = "";
+					return;
+				}
 			}
-			catch (Exception^ ex)
-			{
-				MessageBox::Show(ex->Message);
-			}	
 		}
+		catch (Exception^ ex)
+		{
+			MessageBox::Show(ex->Message);
+		}	
+	}
 }
-
 private: System::Void checkBox1_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
 {
 	if (checkBox1->Checked == true)
@@ -3066,15 +3497,7 @@ private: System::Void emp_id_TextChanged(System::Object^  sender, System::EventA
 {
 	try
 	{
-		String^ strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
-
-		SqlConnection^ con = gcnew SqlConnection(strcon);
-
-		con->Open();
-
-		SqlCommand^ cmd = gcnew SqlCommand("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'", con);
-
-		SqlDataReader^ reader = cmd->ExecuteReader();
+		SqlDataReader^ reader = connect("select * from tbl_employee where Emp_Id='" + emp_id->Text + "'");
 
 		if (reader->Read())
 		{
@@ -3106,13 +3529,258 @@ private: System::Void emp_id_TextChanged(System::Object^  sender, System::EventA
 			line->Text = "";
 			note->Text = "";
 		}
-
-		con->Close();
 	}
 	catch (Exception^ ex)
 	{
 		MessageBox::Show(ex->Message);
 	}
 }
+//Code for Connection Setting
+//Code for Connection Setting
+//Code for Connection Setting
+int count = 0;
+private: void showhide(int num)
+{
+	count += num;
+	if (count == 1)
+		panelsetting->Visible = true;
+	else if (count == 2) 
+	{
+		panelsetting->Visible = false;
+		count = 0;
+	}
+}
+private: System::Void b_setting_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	showhide(1);
+}
+public: int state = 0;
+private: void status()
+{
+	num = 0;
+	state = 0;
+	dtsource->ReadOnly = true;
+	dtbase->ReadOnly = true;
+	use->ReadOnly = true;
+	pas->ReadOnly = true;
+	cns->ReadOnly = true;
+	checkCn->Checked = false;
+}
+String^ test;
+String^ connew;
+int num = 0;
+private: void sendsql()
+{
+	num = 0;
+	if (checkCn->Checked == true)
+		num = 1;
+	if (state == 1)
+	{
+		connew = Connection2::connnectsql("online", dtsource->Text, dtbase->Text, use->Text, pas->Text, "", num);
+	}
+	else if (state == 2)
+	{
+		connew = Connection2::connnectsql("offline", dtsource->Text, dtbase->Text, "", "", "", num);
+	}
+	else if (state == 3)
+	{
+		connew = Connection2::connnectsql("cons", "", "", "", "", cns->Text, num);
+	}
+	else if (state == 0)
+	{
+		connew = Connection2::connnectsql("none", "", "", "", "", "", num);
+	}
+}
+private: void testsql()
+{
+	if (state == 1)
+	{
+		test = Connection2::testsql("online", dtsource->Text, dtbase->Text, use->Text, pas->Text, "");
+	}
+	else if (state == 2)
+	{
+		test = Connection2::testsql("offline", dtsource->Text, dtbase->Text, "", "", "");
+	}
+	else if (state == 3)
+	{
+		test = Connection2::testsql("cons", "", "", "", "", cns->Text);
+	}
+	else if (state == 0)
+	{
+		test = Connection2::testsql("none", "", "", "", "", "");
+	}
+}
+private: System::Void b_saveset_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (MessageBox::Show("Do you want to save the data?", "สอบถาม", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == ::DialogResult::Yes)
+	{
+		sendsql();
+		
+		if (checkCn->Checked == true)
+		{	
+			try
+			{
+				Connection2::executesql2(state, "master" ,"CREATE DATABASE "+dtbase->Text+" COLLATE Thai_CI_AS");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Path]([ID] [int] IDENTITY(1,1) NOT NULL,[path] [nvarchar](200) NULL)");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Tbl_Customer]([Cus_Id] [nvarchar](50) NULL,[Cus_Name] [nvarchar](50) NULL)");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Tbl_Employee]( [ID] [int] IDENTITY(1,1) NOT NULL, [Emp_Id] [nvarchar](100) NULL, [Emp_Password] [nvarchar](100) NULL, [Emp_Name] [nvarchar](100) NULL, [Permission] [nvarchar](50) NULL, [Address1] [nvarchar](100) NULL, [Address2] [nvarchar](100) NULL, [Address3] [nvarchar](100) NULL, [Address4] [nvarchar](100) NULL, [Address5] [nvarchar](100) NULL, [Phone1] [nvarchar](100) NULL, [Phone2] [nvarchar](100) NULL, [Email] [nvarchar](100) NULL, [FB] [nvarchar](100) NULL, [Line] [nvarchar](100) NULL, [Note] [nvarchar](500) NULL)");
+				Connection2::executesql("insert into Tbl_Employee(Emp_Id, Emp_Password, Emp_Name, Permission) values('admin', 'admin', 'เจ้าของร้าน', 'เจ้าของร้าน')");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Tbl_Inventory]( [Product_ID] [nvarchar](50) NULL, [Product_Name] [nvarchar](500) NULL, [Product_Price] [money] NULL, [Product_QTY] [float] NULL, [Product_Type] [nvarchar](100) NULL, [Product_Unit] [nvarchar](100) NULL)");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Tbl_Sale]( [TR_Id] [nvarchar](50) NULL, [TR_Date] [smalldatetime] NULL, [TR_Total] [money] NULL, [TR_Rub] [money] NULL, [TR_Ton] [money] NULL, [Cus_Id] [nvarchar](50) NULL, [Cus_Name] [nvarchar](100) NULL, [Emp_Name] [nvarchar](100) NULL)");
+				Connection2::executesql2(state, dtbase->Text, "CREATE TABLE [dbo].[Tbl_SaleDetail]( [TR_Id] [nvarchar](50) NULL, [Pro_Id] [nvarchar](50) NULL, [Pro_Name] [nvarchar](200) NULL, [Pro_Price] [money] NULL, [Pro_Qty] [money] NULL, [Pro_Unit] [nvarchar](50) NULL, [Pro_Total] [money] NULL)");
+				MessageBox::Show("Save successfully\nID : admin PW : admin", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				checkOnline->Checked = false;
+				checkOffline->Checked = false;
+				checkString->Checked = false;
+				dtsource->Text = "";
+				dtbase->Text = "";
+				use->Text = "";
+				pas->Text = "";
+				cns->Text = "";
+			}
+			catch (Exception^ ex)
+			{
+				MessageBox::Show("Save failed", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning);
+				return;
+			}
+		}
+		else
+		{
+			if (num == 2)
+			{
+				MessageBox::Show("Save successfully", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				checkOnline->Checked = false;
+				checkOffline->Checked = false;
+				checkString->Checked = false;
+				dtsource->Text = "";
+				dtbase->Text = "";
+				use->Text = "";
+				pas->Text = "";
+				cns->Text = "";
+			}
+			else
+			{
+				MessageBox::Show("Save successfully\nID : admin PW : 1234", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				checkOnline->Checked = false;
+				checkOffline->Checked = false;
+				checkString->Checked = false;
+				dtsource->Text = "";
+				dtbase->Text = "";
+				use->Text = "";
+				pas->Text = "";
+				cns->Text = "";
+			}
+		}
+		state = 4;
+	}
+}
+private: System::Void b_test_Click(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (dtsource->TextLength == 0 || dtsource->TextLength == 0)
+	{
+
+	}
+	if (state == 1)
+	{
+		
+	}
+	else if (state == 2)
+	{
+		test = Connection2::testsql("offline", dtsource->Text, dtbase->Text, "", "", "");
+	}
+	else if (state == 3)
+	{
+		test = Connection2::testsql("cons", "", "", "", "", cns->Text);
+	}
+	else if (state == 0)
+	{
+		test = Connection2::testsql("none", "", "", "", "", "");
+	}
+	testsql();
+	try 
+	{
+		SqlConnection^ con = gcnew SqlConnection(test);
+		con->Open();
+		if (MessageBox::Show("Connect successfully", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Information) == ::DialogResult::OK)
+			Connection2::testsql("none", "", "", "", "", "");
+		checkOnline->Checked = false;
+		checkOffline->Checked = false;
+		checkString->Checked = false;
+		dtsource->Text = "";
+		dtbase->Text = "";
+		use->Text = "";
+		pas->Text = "";
+		cns->Text = "";
+		con->Close();
+	}
+	catch (Exception^ ex)
+	{
+		if (MessageBox::Show("Connection failed", "แจ้งเตือน", MessageBoxButtons::OK, MessageBoxIcon::Warning) == ::DialogResult::OK)
+			Connection2::testsql("none", "", "", "", "", "");
+	}
+}
+private: System::Void checkOnline_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (checkOnline->Checked == true)
+	{
+		num = 2;
+		state = 1;
+		checkOffline->Checked = false;
+		checkString->Checked = false;
+		dtsource->ReadOnly = false;
+		dtbase->ReadOnly = false;
+		use->ReadOnly = false;
+		pas->ReadOnly = false;
+		cns->ReadOnly = true;
+	}
+	else
+		status();
+}
+private: System::Void checkOffline_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (checkOffline->Checked == true)
+	{
+		num = 2;
+		state = 2;
+		checkOnline->Checked = false;
+		checkString->Checked = false;
+		dtsource->ReadOnly = false;
+		dtbase->ReadOnly = false;
+		use->ReadOnly = true;
+		pas->ReadOnly = true;
+		cns->ReadOnly = true;
+	}
+	else
+		status();
+}
+private: System::Void checkString_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (checkString->Checked == true)
+	{
+		num = 2;
+		state = 3;
+		checkOffline->Checked = false;
+		checkOnline->Checked = false;
+		dtsource->ReadOnly = true;
+		dtbase->ReadOnly = true;
+		use->ReadOnly = true;
+		pas->ReadOnly = true;
+		cns->ReadOnly = false;
+	}
+	else
+		status();
+}
+private: System::Void checkCn_CheckedChanged(System::Object^  sender, System::EventArgs^  e) 
+{
+	if (state == 0)
+	{
+		checkCn->Checked = false;
+	}
+}
+private: System::Void linkLabel1_LinkClicked(System::Object^  sender, System::Windows::Forms::LinkLabelLinkClickedEventArgs^  e) 
+{
+	Process::Start("https://www.connectionstrings.com/sql-server");
+}
+
 };
 }

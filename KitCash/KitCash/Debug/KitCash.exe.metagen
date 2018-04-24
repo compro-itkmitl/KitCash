@@ -1,4 +1,3 @@
-  KitCash.FormLogin.resources - Embedded, ContainedInManifestFile, 
   KitCash.FormMenu.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly KitCash, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
@@ -25,9 +24,6 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class KitCash.FormLogin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class KitCash.FormMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
@@ -53,6 +49,16 @@ Class KitCash.FormMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     System.Windows.Forms.TextBox phone2 : Public
     System.Windows.Forms.TextBox phone1 : Public
     System.Windows.Forms.TextBox address5 : Public
+    System.Windows.Forms.TextBox dtbase : Public
+    System.Windows.Forms.TextBox dtsource : Public
+    System.Windows.Forms.CheckBox checkString : Public
+    System.Windows.Forms.CheckBox checkOffline : Public
+    System.Windows.Forms.CheckBox checkOnline : Public
+    System.Windows.Forms.TextBox pas : Public
+    System.Windows.Forms.TextBox use : Public
+    System.Windows.Forms.TextBox cns : Public
+    System.Windows.Forms.CheckBox checkCn : Public
+    Int32 state : Public
   Methods:
     loadinventory(): PrivateScope, Public, HideBySig
     cleardata(): PrivateScope, Public, HideBySig

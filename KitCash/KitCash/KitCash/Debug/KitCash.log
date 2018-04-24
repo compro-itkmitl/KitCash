@@ -1,5 +1,10 @@
 ﻿  FormMenu.cpp
-c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2459): warning C4101: 'ex': unreferenced local variable
-c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2555): warning C4101: 'ex': unreferenced local variable
-c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2582): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\connection2.h(64): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2897): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(3017): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(3044): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(3274): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(3641): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(3716): warning C4101: 'ex': unreferenced local variable
+c:\users\pxonez\source\repos\kitcash\kitcash\formmenu.h(2757): warning C4715: 'KitCash::FormMenu::connect': not all control paths return a value
   KitCash.vcxproj -> C:\Users\PxOnez\source\repos\KitCash\Debug\KitCash.exe
