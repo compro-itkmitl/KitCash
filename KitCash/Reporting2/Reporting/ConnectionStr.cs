@@ -7,15 +7,25 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Globalization;
 using System.Windows.Forms;
+using System.IO;
 
 public class ConnectionStr
 {
     public static string strcon;
+
+    public string DataDirectory { get; }
     public static void connnectsql()
     
 
     {
-        strcon = "Data Source=(LocalDB)\\MSSQLLocalDB;Database=Minimart.mdf;Trusted_Connection=True;AttachDbFilename =|DataDirectory|Database\\Minimart.mdf; Integrated Security = True;";
+        string cns = Directory.GetCurrentDirectory();
+        cns = cns.Replace('\\', '/');
+        using (StreamReader sr = File.OpenText(cns+"/cns.txt"))
+        {
+            strcon = sr.ReadLine();
+        }
+
+            
         //strcon = "Data Source=kitcash.database.windows.net;Initial Catalog=Minimart;Integrated Security=False;User ID=kitcash;Password=1475369nN;Connect Timeout=30;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         //strcon = "Data Source = PXONEZ;Initial Catalog = Minimart;Integrated Security = True";
     }

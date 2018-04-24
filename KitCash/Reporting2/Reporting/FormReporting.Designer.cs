@@ -209,6 +209,7 @@
             this.showtotal.Font = new System.Drawing.Font("Cloud Light", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showtotal.Location = new System.Drawing.Point(418, 12);
             this.showtotal.Name = "showtotal";
+            this.showtotal.ReadOnly = true;
             this.showtotal.Size = new System.Drawing.Size(140, 43);
             this.showtotal.TabIndex = 15;
             // 
